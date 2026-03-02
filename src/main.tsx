@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom"; // <-- switched to HashRouter
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import Poetry from "./pages/Poetry";
@@ -17,24 +17,24 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
-        <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
 
-        {/* Static pages */}
-        <Route path="poetry" element={<Poetry />} />
-        <Route path="essays" element={<Essays />} />
-        <Route path="fiction" element={<Fiction />} />
+          {/* Static pages */}
+          <Route path="poetry" element={<Poetry />} />
+          <Route path="essays" element={<Essays />} />
+          <Route path="fiction" element={<Fiction />} />
 
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="manage" element={<Manage />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="manage" element={<Manage />} />
 
-        {/* Dynamic posts */}
-        <Route path=":type/:slug" element={<PostPage />} />
-      </Route>
-    </Routes>
-    </BrowserRouter>
+          {/* Dynamic posts */}
+          <Route path=":type/:slug" element={<PostPage />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );

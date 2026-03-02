@@ -1,0 +1,19 @@
+services:
+  frontend:
+    build: .
+    container_name: lsickles-frontend
+    ports:
+      - "29782:80"
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: lsickles-api
+    ports:
+      - "33737:5002"
+    volumes:
+      - ./api/database:/app/database   
+    command: deno task prod
+    environment:
+      - DATABASE_PATH=/app/database/lsickles.db

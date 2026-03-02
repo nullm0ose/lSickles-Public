@@ -15,7 +15,6 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-    base: '/lSickles-Public/', 
    resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -3,11 +3,11 @@ import profile from "@/assets/profile.jpg"; // Assuming you have a profile image
 
 export default function Contact() {
   return (
-    <main className="max-w-[1200px] mx-auto px-6 py-16 space-y-20">
+    <main className="w-full mx-auto px-6 py-16 space-y-20">
 
       {/* Intro Section */}
       <section
-        className="max-w-3xl mx-auto text-center space-y-6 opacity-0 animate-fade-in-up"
+        className="w-full mx-auto text-center space-y-6 opacity-0 animate-fade-in-up"
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
         <img
@@ -15,7 +15,7 @@ export default function Contact() {
           alt="Lauren Sickles"
           className="w-32 h-32 rounded-full mx-auto mb-4 object-cover mt-2"
         />
-        <h1 className="text-5xl font-serif font-semibold">
+        <h1 className="text-5xl font-serif font-semibold mt-10">
           Lets get in touch
         </h1>
         <p className="text-lg text-foreground leading-relaxed">
@@ -37,12 +37,13 @@ export default function Contact() {
           {/* Name */}
           <div className="space-y-2">
             <label className="block text-sm font-medium text-foreground">
-              Name
+              Your Name
             </label>
             <input
               type="text"
               placeholder="Your name"
-              className="w-full px-4 py-3 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition"
+              className="w-full px-4 py-3 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition
+              placeholder-transparent md:placeholder-foreground/60"
             />
           </div>
 
@@ -54,7 +55,8 @@ export default function Contact() {
             <input
               type="email"
               placeholder="you@example.com"
-              className="w-full px-4 py-3 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition"
+              className="w-full px-4 py-3 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition
+              placeholder-transparent md:placeholder-foreground/60"
             />
           </div>
 
@@ -66,7 +68,8 @@ export default function Contact() {
             <textarea
               rows={6}
               placeholder="Write your message here..."
-              className="w-full px-4 py-3 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition resize-none"
+              className="w-full px-4 py-3 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary transition resize-none
+                    placeholder-transparent md:placeholder-foreground/60"
             />
           </div>
 

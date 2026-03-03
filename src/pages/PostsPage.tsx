@@ -1,13 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import { poetryPosts } from "./content/PoetryContent";
-import { essayPosts } from "./content/EssaysContent";
+import { archivePosts } from "./content/ArchiveContent";
 import { fragmentsPosts } from "./content/FragmentsContent";
 
 import type { PoetryPost } from "./content/PoetryContent";
-import type { EssayPost } from "./content/EssaysContent";
+import type { ArchivePost } from "./content/ArchiveContent";
 import type { FragmentsPost } from "./content/FragmentsContent";
 
-type Post = PoetryPost | EssayPost | FragmentsPost;
+type Post = PoetryPost | ArchivePost | FragmentsPost;
 
 export default function PostPage() {
   const { type, slug } = useParams<{ type: string; slug: string }>();
@@ -15,7 +15,7 @@ export default function PostPage() {
   let post: Post | undefined;
 
   if (type === "poetry") post = poetryPosts.find((p) => p.slug === slug);
-  else if (type === "essays") post = essayPosts.find((p) => p.slug === slug);
+  else if (type === "archive") post = archivePosts.find((p) => p.slug === slug);
   else if (type === "fragments") post = fragmentsPosts.find((p) => p.slug === slug);
 
   if (!post) return <div className="p-10">Post not found.</div>;
@@ -23,7 +23,7 @@ export default function PostPage() {
   // Map type to a friendly name
   const typeLabels: Record<string, string> = {
     poetry: "Poetry",
-    essays: "Essays",
+    archive: "The Archive",
     fragments: "Fragments",
   };
 

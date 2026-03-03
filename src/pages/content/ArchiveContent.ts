@@ -10,7 +10,7 @@ for (const path in images) {
 
 
 
-export interface EssayPost {
+export interface ArchivePost {
   slug: string;
   title: string;
   excerpt: string;
@@ -19,7 +19,7 @@ export interface EssayPost {
   image?: string; // optional image filename
 }
 
-export const essayPosts: EssayPost[] = [
+export const archivePosts: ArchivePost[] = [
   {
     slug: "dirt-hill",
     title: "Dirt Hill",

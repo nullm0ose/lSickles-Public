@@ -4,7 +4,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import Poetry from "./pages/Poetry";
-import Essays from "./pages/Essays";
+import TheArchive from "./pages/TheArchive";
 import Fragments from "./pages/Fragments";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="poetry" element={<Poetry />} />
-      <Route path="essays" element={<Essays />} />
+      <Route path="archive" element={<TheArchive />} />
       <Route path="fragments" element={<Fragments />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />

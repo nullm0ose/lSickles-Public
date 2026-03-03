@@ -8,7 +8,7 @@ export default function TheArchive() {
 
   if (!sortedContent.length) {
     return (
-      <main className="max-w-[1400px] px-6 py-16 mx-auto text-center md:text-left">
+      <main className="w-full px-6 py-16 mx-auto text-center md:text-left">
         <h1 className="text-5xl font-instrument">The Archive</h1>
         <p className="mt-6 text-foreground/70 max-w-3xl mx-auto md:mx-0">
           No entries yet.

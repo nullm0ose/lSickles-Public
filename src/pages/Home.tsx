@@ -67,24 +67,24 @@ export default function Home() {
       </section>
 
       {/* Featured Sections */}
-   <section className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+   <section className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
   {[
     {
       title: "Poetry",
       description:
-        "Work centered on emotion, symbolism, and reflection, often rooted in memory and personal narrative.",
+        " These poems start with something concrete. A room, a field, a younger self and stay there. Structured and intentional, each stands alone yet belongs to a larger arc.",
       href: "poetry", // <-- no leading slash
     },
     {
       title: "Essays",
       description:
-        "Thoughtful explorations of lived experience, identity, and the complexities of everyday life.",
+        "Long form work rooted in lived experience. Workplaces, systems, family histories. These pieces trace life through institutions, relationships, and personal change.",
       href: "archive", // <-- no leading slash
     },
     {
       title: "Fragments",
       description:
-        "Narrative experiments that examine imagination, voice, and the spaces between memory and story.",
+        "Short works without forcing resolution. Some arrive whole, some as shards. Brief scenes, observations, lines that never stretched further. ",
       href: "fragments", // <-- use the actual route
     },
   ].map((item, idx) => (
@@ -94,7 +94,7 @@ export default function Home() {
       className={`
         group flex flex-col p-6 border border-border rounded-md hover:shadow-md transition-shadow bg-card/40
         opacity-0 translate-y-4 animate-fade-in-up
-        text-center md:text-left
+        text-center md:text-center 
       `}
       style={{
         animationDelay: `${0.2 + idx * 0.15}s`,
@@ -102,7 +102,7 @@ export default function Home() {
         animationDuration: "0.6s",
       }}
     >
-      <h2 className="text-2xl font-instrument leading-tight mb-2 group-hover:text-primary transition-colors">
+      <h2 className="text-2xl font-instrument leading-tight mb-2 group-hover:text-primary transition-colors ">
         {item.title}
       </h2>
       <p className="text-foreground text-base">{item.description}</p>
@@ -127,18 +127,19 @@ export default function Home() {
   style={{ animationDelay: '0.7s', animationFillMode: 'forwards', animationDuration: '0.6s' }}
 >
   <h2 className="text-3xl md:text-4xl font-instrument  leading-tight">
-    A Quiet, Intentional Space
+A Body of Work
   </h2>
-  <p className="text-foreground text-base md:text-lg leading-relaxed">
-    This digital linen journal gathers poetry, essays, and reflections into a single, unhurried place. 
-    Here, the voice is central, ideas endure, and the work is presented as a serious, cohesive body of writing.
+  <p className="text-foreground text-base md:text-base leading-relaxed">
+The pieces speak to one another. They build over time. They record a life in motion. They examine labor, memory, authority, growth, and the tension between care and resistance.
+
+This is ongoing work, shaped by where I have been and where I am willing to go.
   </p>
   <p className="text-foreground/70 text-sm md:text-base italic">
-    “A home for thoughts that deserve to linger.”
+    This site gathers my writing in one place.
   </p>
 
   <div className="mt-6 flex flex-col md:flex-row justify-center gap-6">
-    {["Poetry", "Essays", "Fiction"].map((type, idx) => (
+    {["Poetry", "Archived Work", "Fragments"].map((type, idx) => (
       <div
         key={type}
         className="opacity-0 translate-y-2 animate-fade-in-up"
@@ -150,9 +151,9 @@ export default function Home() {
       >
         <h3 className="font-instrument  text-lg md:text-xl">{type}</h3>
         <p className="text-foreground text-sm md:text-base max-w-xs mx-auto">
-          {type === "Poetry" && "Curated works exploring imagination, grief, and reflection."}
-          {type === "Essays" && "Personal reflections that are thoughtful, human, and unhurried."}
-          {type === "Fiction" && "Occasional short stories and narrative experiments."}
+          {type === "Poetry" && "Words tracing emotion & observation. Reduced to image and impact."}
+          {type === "Archived Work" && "Long form personal reflections rooted in lived experience."}
+          {type === "Fragments" && "Short works that hold a moment without forcing resolution."}
         </p>
       </div>
     ))}

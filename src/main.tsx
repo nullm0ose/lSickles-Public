@@ -12,8 +12,7 @@ import PostPage from "./pages/PostsPage";
 
 import "./index.css";
 
-// Use Vite's BASE_URL so paths work on GitHub Pages and custom domains
-const BASE_NAME = import.meta.env.BASE_URL;
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

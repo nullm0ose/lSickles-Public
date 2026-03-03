@@ -160,7 +160,9 @@ All are rooted in what was actually lived.
 
             {/* Text */}
             <div className="flex-1 mt-4 md:mt-0 text-center md:text-left">
-              <p className="text-sm text-foreground/60 mb-2">{post.date}</p>
+<p className="text-sm text-foreground/60 mb-2">
+  {new Date(post.date).toLocaleDateString("en-US", { month: "long", year: "numeric" })}
+</p>
               <h2 className="text-xl font-sans font-medium mb-4 text-foreground/85">
                 {post.title}
               </h2>

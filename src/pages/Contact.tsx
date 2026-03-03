@@ -77,7 +77,7 @@ export default function Contact() {
           <div className="text-center pt-4">
             <Button
               type="submit"
-              className="px-8 py-4 text-lg font-semibold"
+              className="px-10 py-6 text-lg font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors duration-300"
             >
               Send Message
             </Button>

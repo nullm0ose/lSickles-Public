@@ -9,11 +9,12 @@ function isSafari() {
 
 export default function Header() {
   const [safari, setSafari] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     setSafari(isSafari());
   }, []);
-
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -24,53 +25,100 @@ export default function Header() {
     { label: "Contact", href: "/contact" },
   ];
 
-  const location = useLocation();
-
-
-  
-
   return (
-    <header className="w-full bg-background border-b border-border hidden md:block">
-      <div className="container mx-auto px-6 py-6 flex justify-center items-center">
-        <nav className="flex gap-12 md:gap-14 items-center">
-          {navItems.map((item) => {
-            const isActive = location.pathname === item.href;
+    <>
+      {/* Mobile Header */}
+      <div className="md:hidden w-full bg-background border-b border-border">
+        <div className="flex justify-between items-center px-6 py-4">
+          {/* Logo or Site Name */}
+          <Link to="/" className="text-xl font-semibold font-serif text-foreground">
+            Lauren Sickles
+          </Link>
 
-            return (
-              <Button
+          {/* Hamburger */}
+          <button
+            className="flex flex-col justify-between w-6 h-5"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            <span
+              className={`block h-0.5 bg-foreground transition-transform ${
+                mobileOpen ? "rotate-45 translate-y-2" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 bg-foreground transition-opacity ${
+                mobileOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 bg-foreground transition-transform ${
+                mobileOpen ? "-rotate-45 -translate-y-2" : ""
+              }`}
+            />
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        {mobileOpen && (
+          <nav className="flex flex-col gap-4 px-6 pb-4 bg-background">
+            {navItems.map((item) => (
+              <Link
                 key={item.href}
-                asChild
-                variant="ghost"
-                className="relative px-2 py-1 text-lg font-semibold text-foreground transition-colors group"
+                to={item.href}
+                className={`text-lg font-semibold text-foreground py-2 ${
+                  location.pathname === item.href ? "underline" : ""
+                }`}
+                onClick={() => setMobileOpen(false)}
               >
-                <Link
-                  to={item.href}
-                  className="relative inline-block font-inter"
-                 style={
-                    safari
-                      ? {
-                          WebkitFontSmoothing: "antialiased",
-                          MozOsxFontSmoothing: "grayscale",
-                        }
-                      : {}
-                  }
-                >
-                  {item.label}
-                  {/* Underline */}
-                  <span
-                    className={`
-                      absolute left-0 -bottom-0.5 w-full h-[2px] bg-accent rounded-full
-                      transition-opacity duration-200
-                      ${isActive ? "opacity-90" : "opacity-0"}
-                      ${isActive ? "group-hover:opacity-0" : ""}
-                    `}
-                  />
-                </Link>
-              </Button>
-            );
-          })}
-        </nav>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        )}
       </div>
-    </header>
+
+      {/* Desktop Header */}
+      <header className="w-full bg-background border-b border-border hidden md:block">
+        <div className="container mx-auto px-6 py-6 flex justify-center items-center">
+          <nav className="flex gap-12 md:gap-14 items-center">
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.href;
+
+              return (
+                <Button
+                  key={item.href}
+                  asChild
+                  variant="ghost"
+                  className="relative px-2 py-1 text-lg font-semibold text-foreground transition-colors group"
+                >
+                  <Link
+                    to={item.href}
+                    className="relative inline-block font-inter"
+                    style={
+                      safari
+                        ? {
+                            WebkitFontSmoothing: "antialiased",
+                            MozOsxFontSmoothing: "grayscale",
+                          }
+                        : {}
+                    }
+                  >
+                    {item.label}
+                    <span
+                      className={`
+                        absolute left-0 -bottom-0.5 w-full h-[2px] bg-accent rounded-full
+                        transition-opacity duration-200
+                        ${isActive ? "opacity-90" : "opacity-0"}
+                        ${isActive ? "group-hover:opacity-0" : ""}
+                      `}
+                    />
+                  </Link>
+                </Button>
+              );
+            })}
+          </nav>
+        </div>
+      </header>
+    </>
   );
 }

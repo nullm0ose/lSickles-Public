@@ -25,7 +25,7 @@ export const archivePosts: ArchivePost[] = [
     title: "Dirt Hill",
     excerpt:
       "A personal reflection on childhood, seasons, and the way growing up asks us to leave places behind.",
-    date: "January 2025",
+    date: "2025-01-04",
     image: imageMap["dirt.jpg"], 
 
     content: [
@@ -69,7 +69,7 @@ export const archivePosts: ArchivePost[] = [
     title: "The Orchard",
     excerpt:
       "A child facing the end of summer. Freedom narrows as the season shifts. The orchard stands steady while light fades. It is about letting go of wild days and stepping into change.",
-    date: "March 2026",
+    date: "2026-01-01",
     image: imageMap["peach.jpeg"], // reference the imported URL directly
     
     content: [
@@ -87,7 +87,7 @@ export const archivePosts: ArchivePost[] = [
     title: "Night Games",
     excerpt:
       "A vivid, immersive look at summer nights ruled by play, freedom, and imagination, where games, fireflies, and the thrill of the dark transform ordinary streets into a world full of possibility and wonder.",
-    date: "February 2024",
+    date: "2024-2-3",
     image: imageMap["night.jpeg"], // reference the imported URL directly
     
     content: [
@@ -134,7 +134,7 @@ export const archivePosts: ArchivePost[] = [
     title: "Fox and Geese",
     excerpt:
       "A nostalgic winter memory, where a mother’s careful, playful designs turn snow into adventure, warmth, and wonder, leaving a lasting imprint of joy, freedom, and resilience.",
-    date: "June 2025",
+    date: "2025-06-06",
     image: imageMap["foxGeese.jpeg"], // reference the imported URL directly
     
     content: [
@@ -194,7 +194,7 @@ export const archivePosts: ArchivePost[] = [
     title: "The Return",
     excerpt:
       "A quiet, intimate moment between child and adult, capturing wonder, vulnerability, and the tender reckoning of growing up while staying present to love, joy, and bravery.",
-    date: "May 2023",
+    date: "2023-11-05",
     image: imageMap["return.jpg"], // reference the imported URL directly
     content: [
     "She finds me on warm pavement.",

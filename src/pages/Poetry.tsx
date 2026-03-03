@@ -159,7 +159,9 @@ Hope is allowed, but never blindly.
             {/* Text */}
             <div className="flex-1 mt-4 md:mt-0 text-center md:text-left">
               <h3 className="text-xl font-sans font-medium text-foreground/85">{poem.title}</h3>
-              <p className="text-sm text-foreground/60 mt-1">{poem.date}</p>
+<p className="text-sm text-foreground/60 mt-1">
+  {new Date(poem.date).toLocaleDateString("en-US", { month: "long", year: "numeric" })}
+</p>
               <p className="text-foreground text-base mt-3 leading-relaxed max-w-2xl mx-auto md:mx-0">
                 {poem.excerpt}
               </p>

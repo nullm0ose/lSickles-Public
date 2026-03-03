@@ -20,11 +20,37 @@ export interface FragmentsPost {
 
 export const fragmentsPosts: FragmentsPost[] = [
   {
+    slug: "hope",
+    title: "Hope",
+    excerpt:
+      "A reflection that bridges hope and realism, past and future. Through a childhood memory of watching for shooting stars, it shows how belief survives even as we grow older. The light fades, but the instinct to hope remains.",
+    date: "2026-02-01", // ISO date
+    image: imageMap["hope.jpeg"], 
+    content: [
+     "For the sorrowful.",
+"For the keepers of memory.",
+"For the ones who lift their eyes and believe anyway.",
+"For the ones who whisper to the stars.",
+"",
+"For the ones who ache.",
+"For the ones who still reach for light.",
+"",
+"This is where we begin.",
+"In that split second after the shooting star passes, when we close our eyes and hope finds us.",
+"",
+"I remember being young and standing in the dark long after I was supposed to be inside. The sky felt endless then. The constellations never stayed still. I would trace them with my finger, believing that they were waiting for me. And when a streak of light cut across the black, my whole body reacted before my mind did.",
+"",
+"Hope was never lost. Sometimes it was just hiding. It lived in that forgotten space after the falling star, when i believed something unseen could still move toward me.",
+"",
+"I think I am still that girl. I think most of us are.",
+    ],
+  },
+    {
     slug: "aunthood-101",
     title: "Aunthood 101",
     excerpt:
       "A tender and humorous reflection on what it means to be an aunt, exploring love, responsibility, and the lessons learned from children about authority, care, and intentional presence.",
-    date: "January 2024",
+    date: "2024-01-01",
     image: imageMap["aunt.jpeg"], 
     content: [
       "A few months ago I had an intense conversation with my five year old niece while her three year old sister sat beside her. My sister had run into a store for a few minutes and left me in the car with the girls.",
@@ -72,38 +98,12 @@ export const fragmentsPosts: FragmentsPost[] = [
 "And it is the title I carry with the most pride.",
     ],
   },
-  {
-    slug: "hope",
-    title: "Hope",
-    excerpt:
-      "A reflection that bridges hope and realism, past and future. Through a childhood memory of watching for shooting stars, it shows how belief survives even as we grow older. The light fades, but the instinct to hope remains.",
-    date: "February 2026",
-    image: imageMap["hope.jpeg"], 
-    content: [
-     "For the sorrowful.",
-"For the keepers of memory.",
-"For the ones who lift their eyes and believe anyway.",
-"For the ones who whisper to the stars.",
-"",
-"For the ones who ache.",
-"For the ones who still reach for light.",
-"",
-"This is where we begin.",
-"In that split second after the shooting star passes, when we close our eyes and hope finds us.",
-"",
-"I remember being young and standing in the dark long after I was supposed to be inside. The sky felt endless then. The constellations never stayed still. I would trace them with my finger, believing that they were waiting for me. And when a streak of light cut across the black, my whole body reacted before my mind did.",
-"",
-"Hope was never lost. Sometimes it was just hiding. It lived in that forgotten space after the falling star, when i believed something unseen could still move toward me.",
-"",
-"I think I am still that girl. I think most of us are.",
-    ],
-  },
     {
     slug: "pearls",
     title: "Pearls",
     excerpt:
       "A meditation on hope, memory, and wonder, honoring those who look for light in the darkness and trust in the unseen. It reflects on the enduring spark of childhood belief and the quiet moments that sustain us.",
-    date: "December 2024",
+    date: "2024-12-01",
     image: imageMap["pearls.jpg"], 
     content: [
      "For the sorrowful.",

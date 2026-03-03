@@ -26,7 +26,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         className="
-          w-full mx-auto max-w-6xl xl:max-w-7xl
+          w-full sm:max-w-7xl mx-auto max-w-6xl xl:max-w-7xl
           text-center
           space-y-7
           rounded-xl

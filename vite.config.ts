@@ -7,7 +7,6 @@ import path from "path"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/lSickles-Public/',
   plugins: [
     react({
       babel: {

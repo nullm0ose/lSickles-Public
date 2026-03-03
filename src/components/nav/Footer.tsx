@@ -1,11 +1,11 @@
-import { FaTwitter, FaInstagram, FaMedium, FaPenFancy } from "react-icons/fa";
+import {  FaPenFancy } from "react-icons/fa";
+import { FaHandshake } from "react-icons/fa6";
+
 
 export default function Footer() {
   const socialLinks = [
-    { label: "Twitter", href: "https://twitter.com/yourhandle", icon: <FaTwitter /> },
-    { label: "Instagram", href: "https://instagram.com/yourhandle", icon: <FaInstagram /> },
-    { label: "Medium", href: "https://medium.com/@yourhandle", icon: <FaMedium /> },
-    { label: "Substack", href: "https://yourhandle.substack.com", icon: <FaPenFancy /> },
+    { label: "Support my work", href: "https://www.laurensickles.com", icon: <FaHandshake /> },
+    { label: "Follow me on Substack", href: "https://yourhandle.substack.com", icon: <FaPenFancy /> },
   ];
 
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="max-w-[100vw] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col items-center space-y-3">
 
         {/* Social Links */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-9">
           {socialLinks.map((item) => (
             <a
               key={item.href}
@@ -23,7 +23,7 @@ export default function Footer() {
               className="flex items-center gap-1 text-foreground hover:text-primary transition-colors text-sm font-medium"
             >
               <span className="text-lg">{item.icon}</span>
-              <span className="hidden sm:inline">{item.label}</span>
+              <span className="">{item.label}</span>
             </a>
           ))}
         </div>

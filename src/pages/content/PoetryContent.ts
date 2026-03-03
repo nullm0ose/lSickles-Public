@@ -19,7 +19,7 @@ export const poetryPosts: PoetryPost[] = [
     title: "Grief Taught Me",
     excerpt:
       "A free verse poem about learning to live beside grief instead of being consumed by it.",
-    date: "September 2020",
+    date: "2020-09-02",
     image: imageMap["grief.jpg"], // reference the imported URL directly
     content: [
       `Grief taught me
@@ -65,7 +65,7 @@ even when the light returns.`,
     title: "Sprouts",
     excerpt:
       "A metaphor rich reflection on seeds, hidden beginnings, and the trust required for growth to take place.",
-    date: "September 2025",
+    date: "2025-09-15",
      image: imageMap["sprout.jpg"], 
     content: [
       `Seeds are peculiar little travelers.
@@ -89,7 +89,7 @@ And sometimes people are like that too. Walking around looking ordinary while wh
     title: "The Cherry Tree",
     excerpt:
       "A metaphor for depression and return. The world keeps moving. The tree blooms anyway. Recovery comes slowly, almost unnoticed, but it comes.",
-    date: "January 2026",
+    date: "2026-01-01",
     image: imageMap["cherry2.jpg"], // reference the imported URL directly
     content: [
       `I noticed the cherries today,
@@ -127,7 +127,7 @@ even when I am not looking?`,
     title: "Way Home",
     excerpt:
       "A reflective prose piece about a bike ride that becomes a meditation on trust, stillness, and returning to oneself.",
-    date: "June 2024",
+    date: "06-20-2024",
     image: imageMap["boat.jpg"], // reference the imported URL directly
     content: [
       `The wind isn’t always kind, but today it carries me. It moves through the spokes of my bike like breath through a flute, and for a moment, I feel myself becoming part of its song.`,
@@ -144,7 +144,7 @@ even when I am not looking?`,
     title: "Wind and the Wall",
     excerpt:
       "A childhood moment suspended between imagination and reality, where the wind almost carries a girl into flight.",
-    date: "November 2021",
+    date: "2021-11-11",
      image: imageMap["house.jpeg"], 
     content: [
       `I climbed the stone wall in the backyard,
@@ -181,7 +181,7 @@ before I landed`,
     title: "The Ants Go Marching",
     excerpt:
       "Childhood wonder and the quiet magic that endures into adulthood. It explores imagination, memory, and the sacredness of paying attention to small things.",
-    date: "July 2025",
+    date: "2025-7-02",
     image: imageMap["ants.jpg"], 
     content: [
      "When my dad first met me,",

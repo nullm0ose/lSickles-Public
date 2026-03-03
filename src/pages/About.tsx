@@ -141,7 +141,7 @@ personal narrative.
 
         <Button
           asChild
-          className="px-11 py-6.5 text-lg font-semibold mt-2"
+              className="px-10 py-6 text-lg font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors duration-300 mt-10"
         >
           <Link to="/contact">Get in Touch</Link>
         </Button>

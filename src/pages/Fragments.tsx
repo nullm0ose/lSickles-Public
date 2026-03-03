@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import { fragmentsPosts } from "./content/FragmentsContent";
 
 export default function Fragments() {
-  const sortedStories = [...fragmentsPosts].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+const sortedStories = [...fragmentsPosts].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
+
 
   const featuredStory = sortedStories[0];
   const recentStories = sortedStories.slice(1);
@@ -143,7 +145,13 @@ All of them are honest.
 
             {/* Text */}
             <div className="flex-1 mt-4 md:mt-0 text-center md:text-left">
-              <p className="text-sm text-foreground/60 mb-2">{story.date}</p>
+              
+              <p className="text-sm text-foreground/60 mb-2">
+  {new Date(story.date).toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  })}
+</p>
               <h3 className="text-xl font-sans font-medium text-foreground/85 group-hover:text-primary transition-colors">
                 {story.title}
               </h3>

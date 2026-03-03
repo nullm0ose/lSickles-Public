@@ -38,7 +38,7 @@ const renderImage = (image?: string, altText?: string) =>
         style={{ animationDelay: "0s", animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
         <h1 className="text-5xl font-serif font-semibold page-header">
-          Fiction
+          Fragments
         </h1>
         <p className="text-foreground text-lg">
           Short stories and narrative experiments exploring character,

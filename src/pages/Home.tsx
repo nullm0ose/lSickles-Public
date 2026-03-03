@@ -82,7 +82,7 @@ export default function Home() {
       href: "essays", // <-- no leading slash
     },
     {
-      title: "Fiction",
+      title: "Fragments",
       description:
         "Narrative experiments that examine imagination, voice, and the spaces between memory and story.",
       href: "fragments", // <-- use the actual route

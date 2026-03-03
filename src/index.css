@@ -54,6 +54,8 @@
   --shadow-lg: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 4px 6px -1px oklch(0.00 0 0 / 0.10);
   --shadow-xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 8px 10px -1px oklch(0.00 0 0 / 0.10);
   --shadow-2xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.25);
+
+
   
 }
 
@@ -153,10 +155,18 @@
 }
 
 
-.page-header {
-  color: #3A332C;
-}
 
+.header-button {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: oklch(0.33 0.02 67.23);
+  color: #444; /* fallback for Safari */
+  display: inline-flex;
+  width: auto;
+  box-sizing: border-box;
+}
 
 /* styles.css or your global stylesheet */
 .hand-underline {

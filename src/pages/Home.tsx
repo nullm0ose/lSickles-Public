@@ -46,8 +46,7 @@ export default function Home() {
         </p>
 
         <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto">
-          A home for my poetry, essays, and reflective writing.
-        </p>
+My poetry, essays, and reflective writing are gathered here, in one place        </p>
 
         <Button
           asChild
@@ -135,7 +134,7 @@ The pieces speak to one another. They build over time. They record a life in mot
 This is ongoing work, shaped by where I have been and where I am willing to go.
   </p>
   <p className="text-foreground/70 text-sm md:text-base italic">
-    This site gathers my writing in one place.
+    This site gathers my writing in one place
   </p>
 
   <div className="mt-6 flex flex-col md:flex-row justify-center gap-6">
@@ -184,19 +183,19 @@ This is ongoing work, shaped by where I have been and where I am willing to go.
   <div className="space-y-6">
     {[
       {
-        title: "A Quiet Afternoon",
-        excerpt: "Reflections on stillness, memory, and the small details that shape our days.",
-        href: "/posts/quiet-afternoon",
+        title: "The Cherry Tree",
+        excerpt: "A metaphor for depression and return. The world keeps moving. The tree blooms anyway. Recovery comes slowly, almost unnoticed, but it comes.",
+        href: "/poetry/the-cherry-tree",
       },
       {
-        title: "Midwinter Musings",
-        excerpt: "An essay on grief, hope, and the rhythms of seasonal change.",
-        href: "/posts/midwinter-musings",
+        title: "The Orchard",
+        excerpt: "A child facing the end of summer. Freedom narrows as the season shifts. The orchard stands steady while light fades. It is about letting go of wild days and stepping into change.",
+        href: "/archive/the-orchard",
       },
       {
-        title: "Fragments of Fiction",
-        excerpt: "A short narrative experiment exploring the edges of imagination.",
-        href: "/posts/fragments-of-fiction",
+        title: "Hope",
+        excerpt: "A reflection that bridges hope and realism, past and future. Through a childhood memory of watching for shooting stars, it shows how belief survives even as we grow older. The light fades, but the instinct to hope remains.",
+        href: "/fragments/hope",
       },
     ].map((post, idx) => (
       <div
@@ -206,7 +205,7 @@ This is ongoing work, shaped by where I have been and where I am willing to go.
       >
         <div className="flex-1 pr-0 sm:pr-24 text-center sm:text-left">
           <h3 className="text-lg font-sans font-medium  ">{post.title}</h3>
-          <p className="text-foreground text-base mt-1">{post.excerpt}</p>
+          <p className="text-foreground text-base mt-1 max-w-4xl">{post.excerpt}</p>
         </div>
         <div className="mt-4 sm:mt-0 sm:absolute sm:right-4 sm:top-1/2 sm:-translate-y-1/2">
           <Button asChild variant="ghost" className="text-foreground hover:text-primary transition-colors px-4 py-1 text-sm">

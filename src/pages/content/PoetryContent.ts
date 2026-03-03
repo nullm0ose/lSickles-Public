@@ -19,7 +19,7 @@ export const poetryPosts: PoetryPost[] = [
     title: "Grief Taught Me",
     excerpt:
       "A free verse poem about learning to live beside grief instead of being consumed by it.",
-    date: "October 2025",
+    date: "September 2020",
     image: imageMap["grief.jpg"], // reference the imported URL directly
     content: [
       `Grief taught me
@@ -65,8 +65,8 @@ even when the light returns.`,
     title: "Sprouts",
     excerpt:
       "A metaphor rich reflection on seeds, hidden beginnings, and the trust required for growth to take place.",
-    date: "December 2025",
-     //image: imageMap["cherry.jpeg"], 
+    date: "September 2025",
+     image: imageMap["sprout.jpg"], 
     content: [
       `Seeds are peculiar little travelers.
 Sometimes they are tucked in pockets, get stuck to sleeves, wedged in shoe treads, carried in the bellies of birds who do not know they are delivering futures.`,
@@ -88,9 +88,9 @@ And sometimes people are like that too. Walking around looking ordinary while wh
     slug: "the-cherry-tree",
     title: "The Cherry Tree",
     excerpt:
-      "A meditation on unnoticed growth, patience, and the abundance that exists even when we are not paying attention.",
-    date: "October 2025",
-    image: imageMap["cherry.jpeg"], // reference the imported URL directly
+      "A metaphor for depression and return. The world keeps moving. The tree blooms anyway. Recovery comes slowly, almost unnoticed, but it comes.",
+    date: "January 2026",
+    image: imageMap["cherry2.jpg"], // reference the imported URL directly
     content: [
       `I noticed the cherries today,
 growing on my favorite tree outside my bedroom window.
@@ -127,7 +127,7 @@ even when I am not looking?`,
     title: "Way Home",
     excerpt:
       "A reflective prose piece about a bike ride that becomes a meditation on trust, stillness, and returning to oneself.",
-    date: "October 2025",
+    date: "June 2024",
     image: imageMap["boat.jpg"], // reference the imported URL directly
     content: [
       `The wind isn’t always kind, but today it carries me. It moves through the spokes of my bike like breath through a flute, and for a moment, I feel myself becoming part of its song.`,
@@ -144,8 +144,8 @@ even when I am not looking?`,
     title: "Wind and the Wall",
     excerpt:
       "A childhood moment suspended between imagination and reality, where the wind almost carries a girl into flight.",
-    date: "November 2025",
-     //image: imageMap["cherry.jpeg"], 
+    date: "November 2021",
+     image: imageMap["house.jpeg"], 
     content: [
       `I climbed the stone wall in the backyard,
 bare feet pressing against the rough, cold edges,
@@ -180,9 +180,9 @@ before I landed`,
     slug: "the-ants-go-marching",
     title: "The Ants Go Marching",
     excerpt:
-      "MISSING DESCRIPTION",
-    date: "November 2025",
-    //image: imageMap["cherry.jpeg"], 
+      "Childhood wonder and the quiet magic that endures into adulthood. It explores imagination, memory, and the sacredness of paying attention to small things.",
+    date: "July 2025",
+    image: imageMap["ants.jpg"], 
     content: [
      "When my dad first met me,",
 "I was crouched low to the ground,",

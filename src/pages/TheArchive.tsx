@@ -33,7 +33,8 @@ export default function TheArchive() {
     );
 
   return (
-    <main className="px-6 py-16 space-y-20 mx-auto">
+    <main className="px-6 py-16 space-y-20 w-full mx-auto max-w-6xl xl:max-w-7xl">
+
 
       {/* Page Header */}
       <section

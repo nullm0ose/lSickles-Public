@@ -24,8 +24,9 @@ export const archivePosts: ArchivePost[] = [
     slug: "dirt-hill",
     title: "Dirt Hill",
     excerpt:
-      "A nostalgic personal reflection on childhood, seasons, and the way growing up asks us to leave places behind.",
-    date: "January 2026",
+      "A personal reflection on childhood, seasons, and the way growing up asks us to leave places behind.",
+    date: "January 2025",
+    image: imageMap["dirt.jpg"], 
 
     content: [
       "The red brick house sat at the end of a long road.",
@@ -67,8 +68,8 @@ export const archivePosts: ArchivePost[] = [
     slug: "the-orchard",
     title: "The Orchard",
     excerpt:
-      "A lyrical memory of church orchards, a mother’s kitchen, and the way endings can still offer sweetness and safety.",
-    date: "February 2026",
+      "A child facing the end of summer. Freedom narrows as the season shifts. The orchard stands steady while light fades. It is about letting go of wild days and stepping into change.",
+    date: "March 2026",
     image: imageMap["peach.jpeg"], // reference the imported URL directly
     
     content: [
@@ -85,9 +86,9 @@ export const archivePosts: ArchivePost[] = [
     slug: "night-games",
     title: "Night Games",
     excerpt:
-      "MISSING DESCRIPTION",
-    date: "February 2026",
-    //image: imageMap["peach.jpeg"], // reference the imported URL directly
+      "A vivid, immersive look at summer nights ruled by play, freedom, and imagination, where games, fireflies, and the thrill of the dark transform ordinary streets into a world full of possibility and wonder.",
+    date: "February 2024",
+    image: imageMap["night.jpeg"], // reference the imported URL directly
     
     content: [
       "There was a stretch of years when summer did not belong to adults.",
@@ -132,9 +133,9 @@ export const archivePosts: ArchivePost[] = [
     slug: "fox-and-geese",
     title: "Fox and Geese",
     excerpt:
-      "MISSING DESCRIPTION",
-    date: "February 2026",
-    //image: imageMap["peach.jpeg"], // reference the imported URL directly
+      "A nostalgic winter memory, where a mother’s careful, playful designs turn snow into adventure, warmth, and wonder, leaving a lasting imprint of joy, freedom, and resilience.",
+    date: "June 2025",
+    image: imageMap["foxGeese.jpeg"], // reference the imported URL directly
     
     content: [
      "When the first snow fell,",
@@ -192,10 +193,9 @@ export const archivePosts: ArchivePost[] = [
     slug: "the-return",
     title: "The Return",
     excerpt:
-      "MISSING DESCRIPTION",
-    date: "February 2026",
-    //image: imageMap["peach.jpeg"], // reference the imported URL directly
-    
+      "A quiet, intimate moment between child and adult, capturing wonder, vulnerability, and the tender reckoning of growing up while staying present to love, joy, and bravery.",
+    date: "May 2023",
+    image: imageMap["return.jpg"], // reference the imported URL directly
     content: [
     "She finds me on warm pavement.",
 "Hands behind her back,",

@@ -19,7 +19,7 @@ export default function Header() {
     { label: "Home", href: "/" },
     { label: "Poetry", href: "/poetry" },
     { label: "Fragments", href: "/fragments" },
-    { label: "The Archive", href: "/archive" },
+    { label: "Archive", href: "/archive" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];

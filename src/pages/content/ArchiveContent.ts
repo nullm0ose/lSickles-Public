@@ -193,7 +193,7 @@ export const archivePosts: ArchivePost[] = [
     slug: "the-return",
     title: "The Return",
     excerpt:
-      "A quiet, intimate moment between child and adult, capturing wonder, vulnerability, and the tender reckoning of growing up while staying present to love, joy, and bravery.",
+      "A woman is confronted by her younger self. The child she once was reminds her of the wonder, belief, and ambition she used to carry.",
     date: "2023-11-05",
     image: imageMap["return.jpg"], // reference the imported URL directly
     content: [

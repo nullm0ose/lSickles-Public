@@ -35,9 +35,14 @@ export default function Poetry() {
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
         <h1 className="text-5xl font-instrument page-header">Poetry</h1>
-        <p className="text-foreground text-lg max-w-3xl mx-auto md:mx-0">
-          A curated collection of poems exploring memory, imagination, grief,
-          stillness, and the quiet architecture of lived experience.
+        <p className="text-foreground text-lg max-w-5xl mx-auto md:mx-0">
+
+
+These pieces move between past and present. Some poems are tender. Some are unsparing.
+
+Here, imagination and realism stand side by side.
+Hope is allowed, but never blindly.
+
         </p>
       </section>
 

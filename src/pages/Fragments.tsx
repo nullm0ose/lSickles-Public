@@ -32,9 +32,10 @@ export default function Fragments() {
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
         <h1 className="text-5xl font-instrument page-header">Fragments</h1>
-        <p className="text-foreground text-lg max-w-3xl mx-auto md:mx-0">
-          Short stories and narrative experiments exploring character, atmosphere,
-          and the blurred boundary between memory and invention.
+        <p className="text-foreground text-lg max-w-5xl mx-auto md:mx-0">
+Fragments hold moments. They are field notes from a life in motion. Some feel unfinished. Some are complete in their brevity.
+
+All of them are honest.
         </p>
       </section>
 

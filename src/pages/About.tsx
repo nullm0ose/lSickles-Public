@@ -4,11 +4,11 @@ import profile from "@/assets/profile.jpg"; // Assuming you have a profile image
 
 export default function About() {
   return (
-    <main className=" w-full mx-auto px-6 py-16 space-y-20">
+    <main className=" mx-auto px-6 py-16 space-y-20">
 
       {/* Top Section: Intro + Image */}
       <section
-        className="w-full mx-auto bg-card/40 rounded-xl p-10 md:p-14 opacity-0 animate-fade-in-up"
+        className="max-w-5xl mx-auto bg-card/40 rounded-xl p-10 md:p-14 opacity-0 animate-fade-in-up"
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
         <div className="flex flex-col md:flex-row items-center gap-10">

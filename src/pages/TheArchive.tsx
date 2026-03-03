@@ -41,9 +41,14 @@ export default function TheArchive() {
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
         <h1 className="text-5xl font-instrument page-header">The Archive</h1>
-        <p className="text-foreground text-lg max-w-3xl mx-auto md:mx-0">
-          Long-form reflections on creativity, memory, identity, and the quiet
-          architecture of lived experience.
+        <p className="text-foreground text-lg max-w-4xl mx-auto md:mx-0">
+         These essays return to early rooms and early rules.
+
+They expand on lived experience. They follow memory past nostalgia and into consequence.
+
+They look at power inside families. Authority inside institutions. Care inside systems that exhaust it.
+
+All are rooted in what was actually lived.
         </p>
       </section>
 

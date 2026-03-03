@@ -8,14 +8,12 @@ import TheArchive from "./pages/TheArchive";
 import Fragments from "./pages/Fragments";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Manage from "./pages/Manage";
 import PostPage from "./pages/PostsPage";
 
 import "./index.css";
 
 // Use Vite's BASE_URL so paths work on GitHub Pages and custom domains
 const BASE_NAME = import.meta.env.BASE_URL;
-console.log("Base URL:", BASE_NAME);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -28,7 +26,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Route path="fragments" element={<Fragments />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="manage" element={<Manage />} />
       <Route path=":type/:slug" element={<PostPage />} />
     </Route>
   </Routes>

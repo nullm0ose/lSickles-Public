@@ -44,11 +44,13 @@ export default function About() {
               Lauren Sickles
             </h1>
             <p className="text-lg text-foreground leading-relaxed">
-              I am a writer focused on poetry, essays, and reflective prose. My work explores
-              memory, identity, imagination, and the quiet moments that shape who we become.
+I am a writer focused on poetry, essays, and reflective prose. My work
+explores memory, identity, imagination, and the moments that shape who we become.
+This site serves as a curated archive, a deliberate and enduring home for my
+work.
             </p>
             <p className="text-foreground/70 text-base">
-              This site serves as a curated archive — a deliberate and enduring home for my work.
+              This site is a carefully chosen home for my work, a place to keep it alive and accessible.
             </p>
           </div>
 
@@ -64,14 +66,13 @@ export default function About() {
           Writing Philosophy
         </h2>
         <p className="text-foreground text-base leading-relaxed">
-          I believe writing should be intentional, grounded, and human. In a world that
-          moves quickly, I am drawn to work that lingers — language that invites
-          reflection rather than reaction.
+I believe writing should be intentional, grounded, and human. In a world that moves quickly, I am
+drawn to work that lingers, language that invites reflection rather than reaction.
+
         </p>
         <p className="text-foreground text-base leading-relaxed">
-          My approach favors clarity over noise, emotional honesty over spectacle,
-          and cohesion over constant output. Each piece is meant to stand on its own,
-          yet contribute to a larger body of work.
+My approach favors clarity over noise, emotional honesty over spectacle, and cohesion over
+constant output. Each piece is meant to stand on its own, yet contribute to a larger body of work.
         </p>
       </section>
 
@@ -101,8 +102,9 @@ export default function About() {
           <div className="space-y-3">
             <h3 className="font-serif font-semibold text-xl">Poetry</h3>
             <p className="text-foreground text-sm leading-relaxed">
-              Work centered on emotion, symbolism, and reflection — often
-              rooted in memory and personal narrative.
+              Work centered on emotion, symbolism, and
+reflection, often rooted in memory and
+personal narrative.
             </p>
           </div>
 

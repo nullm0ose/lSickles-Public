@@ -7,6 +7,9 @@ export default function Essays() {
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
+    const featuredContent = sortedEssays[0]; // Latest poem as featured
+
+
   // Helper to render image with depth
 const renderImage = (image?: string, altText?: string) =>
   image ? (
@@ -30,7 +33,7 @@ const renderImage = (image?: string, altText?: string) =>
         className="space-y-4 opacity-0 animate-fade-in-up"
         style={{ animationDelay: "0s", animationDuration: "0.5s", animationFillMode: "forwards" }}
       >
-        <h1 className="text-5xl font-serif font-semibold page-header">
+        <h1 className="text-5xl font-instrument page-header">
           Essays
         </h1>
         <p className="text-foreground text-lg max-w-2xl">
@@ -39,15 +42,65 @@ const renderImage = (image?: string, altText?: string) =>
         </p>
       </section>
 
+
+      {/* Featured Content */}
+      <section className="grid md:grid-cols-2 gap-12 items-center bg-card/30 rounded-xl p-8 md:p-12 shadow-sm opacity-0 animate-fade-in-up mt-20"
+               style={{ animationDelay: "0.15s", animationDuration: "0.35s", animationFillMode: "forwards" }}>
+        {/* Image */}
+         {/* Image with depth */}
+  <div className="relative h-80 w-full">
+    {/* Depth Layer */}
+    <div
+      style={{
+        position: "absolute",
+        top: "6px",
+        left: "6px",
+        width: "100%",
+        height: "100%",
+      backgroundColor: "rgb(192, 138, 138, 0.30)",
+        transform: "rotate(-6deg)",
+        borderRadius: "1rem",
+        zIndex: 0,
+      }}
+    />
+
+    {/* Image */}
+    {renderImage(featuredContent.image, featuredContent.title)}
+  </div>
+
+        {/* Text */}
+        <div className="space-y-4">
+          <p className="text-sm text-foreground/60">Featured Poem</p>
+          <h2 className="text-4xl font-serif ">{featuredContent.title}</h2>
+          <p className="text-foreground leading-relaxed">{featuredContent.excerpt}</p>
+          <Link to={`/poetry/${featuredContent.slug}`} className="inline-block text-primary font-medium hover:underline">
+            Read More →
+          </Link>
+        </div>
+      </section>
+
       {/* Essay List */}
-      <section className="space-y-10 bg-card/40 rounded-xl p-10 md:p-14 border border-border w-full">
+            <section className="space-y-10 w-full mt-30 w-full">
+
+      
+              <div className="space-y-2 max-w-3xl opacity-0 animate-fade-in-up"
+             style={{ animationDelay: "0.3s", animationDuration: "0.35s", animationFillMode: "forwards" }}>
+    <h2 className="text-3xl font-serif  mt-5 relative inline-block">
+            More to Explore
+            <span className="hand-underline" />
+          </h2>
+          <p className="text-foreground/70 text-lg">
+            A curated selection of my latest reflections in poetry, exploring memory, stillness, and imagination.
+          </p>
+        </div>
+      
         {sortedEssays.map((essay, index) => (
           <div
             key={`${essay.slug}-${index}`}
             className={`
               flex flex-col md:flex-row items-start gap-6
               pl-0 md:pl-8 border-l-2 border-primary/40
-              pb-6
+              pb-6 bg-card/40 rounded-xl p-10 md:p-14 border border-border
               ${index !== sortedEssays.length - 1 ? "border-b border-border/20" : ""}
               opacity-0 animate-fade-in-up
             `}
@@ -103,7 +156,7 @@ const renderImage = (image?: string, altText?: string) =>
             <div className="flex-1">
               <p className="text-sm text-foreground/60 mb-2">{essay.date}</p>
 
-              <h2 className="text-3xl font-serif font-semibold mb-4">
+              <h2 className="text-xl font-sans font-medium mb-4">
                 {essay.title}
               </h2>
 

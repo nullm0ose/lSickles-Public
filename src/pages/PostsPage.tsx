@@ -16,7 +16,7 @@ export default function PostPage() {
 
   if (type === "poetry") post = poetryPosts.find((p) => p.slug === slug);
   else if (type === "essays") post = essayPosts.find((p) => p.slug === slug);
-  else if (type === "fiction") post = fragmentsPosts.find((p) => p.slug === slug);
+  else if (type === "fragments") post = fragmentsPosts.find((p) => p.slug === slug);
 
   if (!post) return <div className="p-10">Post not found.</div>;
 
@@ -24,7 +24,7 @@ export default function PostPage() {
   const typeLabels: Record<string, string> = {
     poetry: "Poetry",
     essays: "Essays",
-    fiction: "Fiction",
+    fragments: "Fragments",
   };
 
   const backLabel = type ? typeLabels[type] || "Posts" : "Posts";

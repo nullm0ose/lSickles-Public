@@ -78,7 +78,7 @@ const renderImage = (image?: string, altText?: string) =>
       <section className="space-y-10 w-full mt-30">
         <div className="space-y-2 max-w-3xl opacity-0 animate-fade-in-up"
              style={{ animationDelay: "0.3s", animationDuration: "0.35s", animationFillMode: "forwards" }}>
-    <h2 className="text-4xl font-serif  mt-5 relative inline-block">
+    <h2 className="text-3xl font-serif  mt-5 relative inline-block">
             Recent Poems
             <span className="hand-underline" />
           </h2>
@@ -132,7 +132,7 @@ const renderImage = (image?: string, altText?: string) =>
 
             {/* Text */}
             <div className="flex-1">
-              <h3 className="text-2xl font-serif font-semibold">{poem.title}</h3>
+              <h3 className="text-xl font-sans font-medium">{poem.title}</h3>
               <p className="text-sm text-foreground/60 mt-1">{poem.date}</p>
               <p className="text-foreground text-base mt-3 leading-relaxed max-w-2xl">{poem.excerpt}</p>
             </div>

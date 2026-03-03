@@ -19,7 +19,7 @@ export const poetryPosts: PoetryPost[] = [
     title: "Grief Taught Me",
     excerpt:
       "A free verse poem about learning to live beside grief instead of being consumed by it.",
-    date: "December 2025",
+    date: "October 2025",
     image: imageMap["grief.jpg"], // reference the imported URL directly
     content: [
       `Grief taught me
@@ -65,7 +65,7 @@ even when the light returns.`,
     title: "Sprouts",
     excerpt:
       "A metaphor rich reflection on seeds, hidden beginnings, and the trust required for growth to take place.",
-    date: "October 2025",
+    date: "December 2025",
     image: imageMap["house.jpeg"], // reference the imported URL directly
     content: [
       `Seeds are peculiar little travelers.

@@ -204,7 +204,7 @@ export default function Home() {
         style={{ animationDelay: `${1.3 + idx * 0.1}s`, animationFillMode: 'forwards', animationDuration: '0.5s' }}
       >
         <div className="flex-1 pr-0 sm:pr-24 text-center sm:text-left">
-          <h3 className="text-xl font-serif  ">{post.title}</h3>
+          <h3 className="text-lg font-sans font-medium  ">{post.title}</h3>
           <p className="text-foreground text-base mt-1">{post.excerpt}</p>
         </div>
         <div className="mt-4 sm:mt-0 sm:absolute sm:right-4 sm:top-1/2 sm:-translate-y-1/2">

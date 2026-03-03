@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { fragmentsPosts } from "./content/FragmentsContent";
 
 export default function Fragments() {
-  // Sort fiction posts by date descending (latest first)
+  // Sort fragments posts by date descending (latest first)
   const sortedStories = [...fragmentsPosts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
@@ -30,14 +30,14 @@ const renderImage = (image?: string, altText?: string) =>
 
 
   return (
-    <main className="max-w-[1400px] px-6 py-16 space-y-20">
+    <main className="px-6 py-16 space-y-20">
 
       {/* Header */}
       <section
         className="space-y-4 max-w-3xl opacity-0 animate-fade-in-up"
         style={{ animationDelay: "0s", animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
-        <h1 className="text-5xl font-serif font-semibold page-header">
+        <h1 className="text-5xl font-instrument page-header">
           Fragments
         </h1>
         <p className="text-foreground text-lg">
@@ -49,7 +49,7 @@ const renderImage = (image?: string, altText?: string) =>
       {/* Featured Story */}
       {featuredStory && (
         <section
-          className="grid md:grid-cols-2 gap-12 items-center opacity-0 animate-fade-in-up"
+          className="grid md:grid-cols-2 gap-12 items-center opacity-0 animate-fade-in-up mt-40"
           style={{ animationDelay: "0.15s", animationDuration: "0.35s", animationFillMode: "forwards" }}
         >
           {/* Image with depth */}
@@ -77,7 +77,7 @@ const renderImage = (image?: string, altText?: string) =>
           <div className="space-y-4">
             <p className="text-sm text-foreground/60">Featured Story</p>
 
-            <h2 className="text-4xl font-serif font-semibold">
+            <h2 className="text-4xl font-serif ">
               {featuredStory.title}
             </h2>
 
@@ -86,7 +86,7 @@ const renderImage = (image?: string, altText?: string) =>
             </p>
 
             <Link
-              to={`/fiction/${featuredStory.slug}`}
+              to={`/fragments/${featuredStory.slug}`}
               className="inline-block text-primary font-medium hover:underline"
             >
               Read Story →
@@ -96,12 +96,12 @@ const renderImage = (image?: string, altText?: string) =>
       )}
 
       {/* Recent Stories Grid */}
-      <section className="space-y-8">
+      <section className="space-y-8 mt-40">
         <div
           className="space-y-2 opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.45s", animationDuration: "0.35s", animationFillMode: "forwards" }}
         >
-          <h2 className="text-3xl font-serif font-semibold text-foreground relative inline-block">
+          <h2 className="text-3xl font-serif  mt-5 relative inline-block">
             Recent Stories
             <span className="hand-underline" />
           </h2>
@@ -113,7 +113,7 @@ const renderImage = (image?: string, altText?: string) =>
         {recentStories.map((story, index) => (
           <Link
             key={`${story.slug}-${index}`}
-            to={`/fiction/${story.slug}`}
+            to={`/fragments/${story.slug}`}
             className="group flex flex-col md:flex-row items-start gap-6 p-6 border border-border rounded-md hover:shadow-md transition-all bg-card/40 opacity-0 animate-fade-in-up"
             style={{
               animationDelay: `${0.6 + index * 0.12}s`,
@@ -164,7 +164,7 @@ const renderImage = (image?: string, altText?: string) =>
             <div className="flex-1">
               <p className="text-sm text-foreground/60 mb-2">{story.date}</p>
               
-              <h3 className="text-xl font-serif font-semibold group-hover:text-primary transition-colors">
+              <h3 className="text-xl font-sans font-medium group-hover:text-primary transition-colors">
                 {story.title}
               </h3>
 

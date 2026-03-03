@@ -89,7 +89,7 @@ const renderImage = (image?: string, altText?: string) =>
             More to Explore
             <span className="hand-underline" />
           </h2>
-          <p className="text-foreground/70 text-lg">
+          <p className="text-foreground/70 text-base">
             A curated selection of my latest reflections in poetry, exploring memory, stillness, and imagination.
           </p>
         </div>
@@ -156,7 +156,7 @@ const renderImage = (image?: string, altText?: string) =>
             <div className="flex-1">
               <p className="text-sm text-foreground/60 mb-2">{essay.date}</p>
 
-              <h2 className="text-xl font-sans font-medium mb-4">
+              <h2 className="text-xl font-sans font-medium mb-4 text-foreground/85">
                 {essay.title}
               </h2>
 

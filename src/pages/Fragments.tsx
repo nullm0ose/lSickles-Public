@@ -164,7 +164,7 @@ const renderImage = (image?: string, altText?: string) =>
             <div className="flex-1">
               <p className="text-sm text-foreground/60 mb-2">{story.date}</p>
               
-              <h3 className="text-xl font-sans font-medium group-hover:text-primary transition-colors">
+              <h3 className="text-xl font-sans font-medium text-foreground/85 group-hover:text-primary transition-colors ">
                 {story.title}
               </h3>
 

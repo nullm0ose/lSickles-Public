@@ -82,7 +82,7 @@ const renderImage = (image?: string, altText?: string) =>
             Recent Poems
             <span className="hand-underline" />
           </h2>
-          <p className="text-foreground/70 text-lg">
+          <p className="text-foreground/70 text-base">
             A curated selection of my latest reflections in poetry, exploring memory, stillness, and imagination.
           </p>
         </div>
@@ -132,7 +132,7 @@ const renderImage = (image?: string, altText?: string) =>
 
             {/* Text */}
             <div className="flex-1">
-              <h3 className="text-xl font-sans font-medium">{poem.title}</h3>
+              <h3 className="text-xl font-sans font-medium text-foreground/85">{poem.title}</h3>
               <p className="text-sm text-foreground/60 mt-1">{poem.date}</p>
               <p className="text-foreground text-base mt-3 leading-relaxed max-w-2xl">{poem.excerpt}</p>
             </div>

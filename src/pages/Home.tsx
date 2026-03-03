@@ -79,7 +79,7 @@ export default function Home() {
       title: "Essays",
       description:
         "Thoughtful explorations of lived experience, identity, and the complexities of everyday life.",
-      href: "essays", // <-- no leading slash
+      href: "archive", // <-- no leading slash
     },
     {
       title: "Fragments",

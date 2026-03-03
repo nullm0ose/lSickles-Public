@@ -18,6 +18,8 @@ export default function Home() {
     return () => clearTimeout(timeout);
   }, []);
 
+  
+
   return (
     <main className="space-y-20">
 
@@ -65,44 +67,51 @@ export default function Home() {
       </section>
 
       {/* Featured Sections */}
-      <section className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
-        {[
-          {
-            title: "Poetry",
-            description: "Work centered on emotion, symbolism, and reflection, often rooted in memory and personal narrative.",
-            href: "/poetry",
-          },
-          {
-            title: "Essays",
-            description: "Thoughtful explorations of lived experience, identity, and the complexities of everyday life.",
-            href: "/essays",
-          },
-          {
-            title: "Fiction",
-            description: "Narrative experiments that examine imagination, voice, and the spacesbetween memory and story.",
-            href: "/fiction",
-          },
-        ].map((item, idx) => (
-          <Link
-            key={item.title}
-            to={item.href}
-            className={`
-              group flex flex-col p-6 border border-border rounded-md hover:shadow-md transition-shadow bg-card/40
-              opacity-0 translate-y-4 animate-fade-in-up
-              text-center md:text-left
-            `}
-            style={{ animationDelay: `${0.2 + idx * 0.15}s`, animationFillMode: 'forwards', animationDuration: '0.6s' }}
-          >
-            <h2 className="text-2xl font-instrument leading-tight mb-2 group-hover:text-primary transition-colors">
-              {item.title}
-            </h2>
-            <p className="text-foreground text-base">{item.description}</p>
-            <span className="mt-4 text-primary font-medium group-hover:underline transition-all">
-              View {item.title.toLowerCase()}
-            </span>
-          </Link>
-        ))}
-      </section>
+   <section className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+  {[
+    {
+      title: "Poetry",
+      description:
+        "Work centered on emotion, symbolism, and reflection, often rooted in memory and personal narrative.",
+      href: "poetry", // <-- no leading slash
+    },
+    {
+      title: "Essays",
+      description:
+        "Thoughtful explorations of lived experience, identity, and the complexities of everyday life.",
+      href: "essays", // <-- no leading slash
+    },
+    {
+      title: "Fiction",
+      description:
+        "Narrative experiments that examine imagination, voice, and the spaces between memory and story.",
+      href: "fragments", // <-- use the actual route
+    },
+  ].map((item, idx) => (
+    <Link
+      key={item.title}
+      to={item.href}
+      className={`
+        group flex flex-col p-6 border border-border rounded-md hover:shadow-md transition-shadow bg-card/40
+        opacity-0 translate-y-4 animate-fade-in-up
+        text-center md:text-left
+      `}
+      style={{
+        animationDelay: `${0.2 + idx * 0.15}s`,
+        animationFillMode: "forwards",
+        animationDuration: "0.6s",
+      }}
+    >
+      <h2 className="text-2xl font-instrument leading-tight mb-2 group-hover:text-primary transition-colors">
+        {item.title}
+      </h2>
+      <p className="text-foreground text-base">{item.description}</p>
+      <span className="mt-4 text-primary font-medium group-hover:underline transition-all">
+        View {item.title.toLowerCase()}
+      </span>
+    </Link>
+  ))}
+</section>
 
 {/* About Section */}
 <section

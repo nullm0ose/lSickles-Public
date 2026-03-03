@@ -4,7 +4,7 @@ import profile from "@/assets/profile.jpg"; // Assuming you have a profile image
 
 export default function About() {
   return (
-    <main className="max-w-[1600px] mx-auto px-6 py-16 space-y-20">
+    <main className=" mx-auto px-6 py-16 space-y-20">
 
       {/* Top Section: Intro + Image */}
       <section

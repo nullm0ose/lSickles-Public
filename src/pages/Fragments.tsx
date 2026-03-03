@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { fictionPosts } from "./content/FictionContent";
+import { fragmentsPosts } from "./content/FragmentsContent";
 
-export default function Fiction() {
+export default function Fragments() {
   // Sort fiction posts by date descending (latest first)
-  const sortedStories = [...fictionPosts].sort(
+  const sortedStories = [...fragmentsPosts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 

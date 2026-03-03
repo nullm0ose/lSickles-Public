@@ -9,7 +9,7 @@ for (const path in images) {
 }
 
 
-export interface FictionPost {
+export interface FragmentsPost {
   slug: string;
   title: string;
   excerpt: string;
@@ -18,7 +18,7 @@ export interface FictionPost {
   image?: string; // optional image filename
 }
 
-export const fictionPosts: FictionPost[] = [
+export const fragmentsPosts: FragmentsPost[] = [
   {
     slug: "the-last-lighthouse",
     title: "The Last Lighthouse",

@@ -1,13 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import { poetryPosts } from "./content/PoetryContent";
 import { essayPosts } from "./content/EssaysContent";
-import { fictionPosts } from "./content/FictionContent";
+import { fragmentsPosts } from "./content/FragmentsContent";
 
 import type { PoetryPost } from "./content/PoetryContent";
 import type { EssayPost } from "./content/EssaysContent";
-import type { FictionPost } from "./content/FictionContent";
+import type { FragmentsPost } from "./content/FragmentsContent";
 
-type Post = PoetryPost | EssayPost | FictionPost;
+type Post = PoetryPost | EssayPost | FragmentsPost;
 
 export default function PostPage() {
   const { type, slug } = useParams<{ type: string; slug: string }>();
@@ -16,7 +16,7 @@ export default function PostPage() {
 
   if (type === "poetry") post = poetryPosts.find((p) => p.slug === slug);
   else if (type === "essays") post = essayPosts.find((p) => p.slug === slug);
-  else if (type === "fiction") post = fictionPosts.find((p) => p.slug === slug);
+  else if (type === "fiction") post = fragmentsPosts.find((p) => p.slug === slug);
 
   if (!post) return <div className="p-10">Post not found.</div>;
 

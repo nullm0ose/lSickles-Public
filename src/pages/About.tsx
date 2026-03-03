@@ -115,7 +115,7 @@ export default function About() {
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-serif font-semibold text-xl">Fiction</h3>
+            <h3 className="font-serif font-semibold text-xl">Fragments</h3>
             <p className="text-foreground text-sm leading-relaxed">
               Narrative experiments that examine imagination,
               voice, and the spaces between memory and story.

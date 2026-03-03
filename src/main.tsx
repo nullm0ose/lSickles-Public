@@ -5,7 +5,7 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import Poetry from "./pages/Poetry";
 import Essays from "./pages/Essays";
-import Fiction from "./pages/Fiction";
+import Fragments from "./pages/Fragments";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Manage from "./pages/Manage"; // ✅ Manage page
@@ -25,7 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           {/* Static pages */}
           <Route path="poetry" element={<Poetry />} />
           <Route path="essays" element={<Essays />} />
-          <Route path="fiction" element={<Fiction />} />
+          <Route path="fragments" element={<Fragments />} />
 
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />

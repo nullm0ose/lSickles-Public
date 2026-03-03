@@ -34,7 +34,7 @@ export default function TheArchive() {
     );
 
   return (
-    <main className="max-w-[1400px] px-6 py-16 space-y-16">
+    <main className="px-6 py-16 space-y-20">
       {/* Header */}
       <section
         className="space-y-4 opacity-0 animate-fade-in-up"
@@ -55,7 +55,7 @@ export default function TheArchive() {
 
       {/* Featured Content */}
       <section
-        className="grid md:grid-cols-2 gap-12 items-center bg-card/30 rounded-xl p-8 md:p-12 shadow-sm opacity-0 animate-fade-in-up mt-20"
+      className="grid md:grid-cols-2 gap-12 items-center bg-card/30 rounded-xl p-8 md:p-12 shadow-sm opacity-0 animate-fade-in-up"
         style={{
           animationDelay: "0.15s",
           animationDuration: "0.35s",

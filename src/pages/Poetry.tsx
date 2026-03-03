@@ -39,7 +39,8 @@ const renderImage = (image?: string, altText?: string) =>
       </section>
 
       {/* Featured Poem */}
-      <section className="grid md:grid-cols-2 gap-12 items-center bg-card/30 rounded-xl p-8 md:p-12 shadow-sm opacity-0 animate-fade-in-up"
+      <section 
+      className="grid md:grid-cols-2 gap-12 items-center bg-card/30 rounded-xl p-8 md:p-12 shadow-sm opacity-0 animate-fade-in-up"
                style={{ animationDelay: "0.15s", animationDuration: "0.35s", animationFillMode: "forwards" }}>
         {/* Image */}
          {/* Image with depth */}

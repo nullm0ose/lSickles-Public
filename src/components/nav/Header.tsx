@@ -59,34 +59,34 @@ export default function Header() {
         </div>
 
         {/* Mobile menu */}
-        {mobileOpen && (
-          <nav className="flex flex-col gap-4 px-6 pb-4 bg-background">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
-                className={`
-  text-lg
-  font-base
-  leading-tight
-  tracking-tight
-  py-2
-  transition-colors
-  text-foreground/80
-
-  ${
-    location.pathname === item.href
-      ? "text-foreground underline"
-      : "text-foreground/80 hover:text-foreground"
-  }
-`}
-                onClick={() => setMobileOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        )}
+      {/* Mobile menu */}
+<div
+  className={`
+    overflow-hidden
+    transition-all duration-300 ease-out
+    ${mobileOpen ? "max-h-96 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}
+  `}
+>
+  <nav className="flex flex-col gap-4 px-6 pb-4 bg-background">
+    {navItems.map((item) => (
+      <Link
+        key={item.href}
+        to={item.href}
+        className={`
+          text-lg font-base leading-tight tracking-tight py-2 transition-colors
+          ${
+            location.pathname === item.href
+              ? "text-foreground underline"
+              : "text-foreground/80 hover:text-foreground"
+          }
+        `}
+        onClick={() => setMobileOpen(false)}
+      >
+        {item.label}
+      </Link>
+    ))}
+  </nav>
+</div>
       </div>
 
       {/* Desktop Header */}

@@ -1,10 +1,13 @@
 import Header from "@/components/nav/Header";
 import Footer from "@/components/nav/Footer";
 import { Outlet } from "react-router-dom";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden bg-background text-foreground">
+      <ScrollToTop />
+
       <header className="w-full">
         <Header />
       </header>

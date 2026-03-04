@@ -37,7 +37,7 @@ export default function Home() {
         "
         style={{ animationDelay: '0.1s', animationFillMode: 'forwards', animationDuration: '0.6s' }}
       >
-        <h1 className="text-5xl md:text-6xl font-instrument leading-tight">
+        <h1 className="text-4xl md:text-6xl font-instrument leading-tight text-center">
           Lauren Sickles
         </h1>
 
@@ -51,7 +51,7 @@ My poetry, essays, and reflective writing are gathered here, in one place       
         <Button
           asChild
           variant="default"
-          className="mt-6 bg-primary hover:bg-primary/90 transition-colors px-10 py-6.5 text-lg font-base rounded-md shadow-md"
+          className="mt-6 bg-primary hover:bg-primary/90 transition-colors px-10 py-6.5 text-lg font-base rounded-md shadow-md "
         >
           <Link to="/poetry">
             <span

@@ -41,16 +41,21 @@ export default function TheArchive() {
         className="space-y-4 text-center md:text-left opacity-0 animate-fade-in-up"
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
-        <h1 className="text-5xl font-instrument page-header">The Archive</h1>
-        <p className="text-foreground text-lg max-w-4xl mx-auto md:mx-0">
-         These essays return to early rooms and early rules.
+<h1 className="text-5xl sm:text-6xl md:text-7xl font-instrument page-header text-center">
+  The Archive
+</h1>
 
-They expand on lived experience. They follow memory past nostalgia and into consequence.
+<p className="mt-6 max-w-2xl mx-auto text-center 
+              text-base sm:text-lg md:text-xl 
+              text-foreground/70 leading-relaxed">
+  These essays return to early rooms and early rules.
 
-They look at power inside families. Authority inside institutions. Care inside systems that exhaust it.
+  They expand on lived experience. They follow memory past nostalgia and into consequence.
 
-All are rooted in what was actually lived.
-        </p>
+  They look at power inside families. Authority inside institutions. Care inside systems that exhaust it.
+
+  All are rooted in what was actually lived.
+</p>
       </section>
 
       {/* Featured Content */}

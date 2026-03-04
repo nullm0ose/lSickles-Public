@@ -33,12 +33,18 @@ const sortedStories = [...fragmentsPosts].sort(
         mx-auto text-center md:text-left opacity-0 animate-fade-in-up"
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
-        <h1 className="text-5xl font-instrument page-header">Fragments</h1>
-        <p className="text-foreground text-lg max-w-5xl mx-auto md:mx-0">
-Fragments hold moments. They are field notes from a life in motion. Some feel unfinished. Some are complete in their brevity.
+<h1 className="text-5xl sm:text-6xl md:text-7xl font-instrument page-header text-center">
+  Fragments
+</h1>
 
-All of them are honest.
-        </p>
+<p className="mt-6 max-w-2xl mx-auto text-center 
+              text-base sm:text-lg md:text-xl 
+              text-foreground/70 leading-relaxed">
+  Fragments hold moments. They are field notes from a life in motion. 
+  Some feel unfinished. Some are complete in their brevity.
+
+  All of them are honest.
+</p>
       </section>
 
       {/* Featured Story */}

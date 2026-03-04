@@ -34,16 +34,19 @@ export default function Poetry() {
         md:text-left opacity-0 animate-fade-in-up"
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
-        <h1 className="text-5xl font-instrument page-header">Poetry</h1>
-        <p className="text-foreground text-lg max-w-5xl mx-auto md:mx-0">
+<h1 className="text-5xl sm:text-6xl md:text-7xl font-instrument page-header text-center">
+  Poetry
+</h1>
 
+<p className="mt-6 max-w-2xl mx-auto text-center 
+               text-base sm:text-lg md:text-xl 
+               text-foreground/70 leading-relaxed">
+  These pieces move between past and present. Some poems are tender. 
+  Some are unsparing.
 
-These pieces move between past and present. Some poems are tender. Some are unsparing.
-
-Here, imagination and realism stand side by side.
-Hope is allowed, but never blindly.
-
-        </p>
+  Here, imagination and realism stand side by side.
+  Hope is allowed, but never blindly.
+</p>
       </section>
 
       {/* Featured Poem */}

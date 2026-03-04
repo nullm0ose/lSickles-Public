@@ -37,34 +37,44 @@ export default function PostPage() {
     <main className="max-w-3xl mx-auto px-6 py-12 sm:py-16 space-y-16">
 
       {/* Header */}
-      <section className="text-center space-y-6">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-instrument page-header">
-          {post.title}
-        </h1>
+     <section className="text-center space-y-6">
+  <h1 className="
+    text-4xl sm:text-4xl md:text-5xl
+    font-instrument font-base
+    leading-tight tracking-tight
+    text-balance
+  ">
+    {post.title}
+  </h1>
 
-        {post.excerpt && (
-          <p className="max-w-2xl mx-auto
-                        text-sm sm:text-base md:text-lg
-                        text-foreground/70 leading-relaxed">
-            {post.excerpt}
-          </p>
-        )}
-      </section>
+  {post.excerpt && (
+    <p className="
+      max-w-2xl mx-auto
+      text-base sm:text-lg md:text-lg
+      leading-relaxed
+      text-foreground/60
+      
+    ">
+      {post.excerpt}
+    </p>
+  )}
+</section>
 
       {/* Content */}
 <section
-  className="bg-card/30 backdrop-blur-sm 
-             border border-border/40
-             rounded-2xl
-             px-6 sm:px-10 md:px-14
-             py-12 sm:py-14
+  className=" backdrop-blur-sm 
+             border 
+             bg-card/10 border-border/30
+             rounded-md
+             px-4 sm:px-10 md:px-14
+             py-10 sm:py-14
              shadow-sm"
 >
   <div
     className="space-y-6 sm:space-y-8
                text-base sm:text-lg
                leading-relaxed sm:leading-loose
-               text-center sm:text-left"
+               text-left sm:text-left"
   >
     {post.content.map((paragraph, i) => (
       <p key={i} className="mx-auto sm:mx-0 max-w-prose">
@@ -75,7 +85,7 @@ export default function PostPage() {
 </section>
 
       {/* Back Link */}
-      <div className="pt-8 border-t border-border/50 text-center">
+      <div className="pt-8 border-t border-border/80 text-center">
         <Link
           to={`/${type}`}
           className="text-sm text-foreground/60 hover:text-foreground transition-colors"

@@ -3,6 +3,9 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource/instrument-serif/400.css";
 @custom-variant dark (&:is(.dark *));
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
 
 
 :root {

@@ -23,47 +23,64 @@ export default function Home() {
   return (
     <main className="space-y-20">
 
-      {/* Hero Section */}
-      <section
-        className="
-          w-full sm:max-w-7xl mx-auto max-w-6xl xl:max-w-7xl
-          text-center
-          space-y-7
-          rounded-xl
-          p-6 sm:p-10 md:p-14 lg:p-16
-          bg-card
-          bg-[repeating-linear-gradient(to_bottom,transparent,transparent_32px,rgba(0,0,0,0.11)_33px)]
-          opacity-0 translate-y-4 animate-fade-in-up
-        "
-        style={{ animationDelay: '0.1s', animationFillMode: 'forwards', animationDuration: '0.6s' }}
+{/* Hero Section */}
+<section
+  className="
+    w-full sm:max-w-7xl mx-auto max-w-6xl xl:max-w-7xl
+    text-center
+    space-y-7
+    rounded-xl
+    p-6 sm:p-10 md:p-14 lg:p-16
+    bg-card
+    bg-[repeating-linear-gradient(to_bottom,transparent,transparent_32px,rgba(0,0,0,0.11)_33px)]
+    opacity-0 translate-y-4 animate-fade-in-up
+
+    flex flex-col justify-center
+    min-h-[70vh] sm:min-h-auto
+  "
+  style={{ animationDelay: '0.1s', animationFillMode: 'forwards', animationDuration: '0.6s' }}
+>
+  {/* Name */}
+  <h1 className="text-[2.5rem] sm:text-4xl md:text-6xl font-instrument leading-tight">
+    Lauren Sickles
+  </h1>
+
+  {/* Subtitle */}
+  <p className="uppercase tracking-widest text-foreground/60 font-medium text-sm md:text-base">
+    Writer · Poet · Storyteller
+  </p>
+
+  {/* Description */}
+  <p className="text-lg md:text-xl text-foreground max-w-[90%] sm:max-w-3xl mx-auto">
+    My poetry, essays, and reflective writing are gathered here, in one place
+  </p>
+
+  {/* CTA Button */}
+  <Button
+    asChild
+    variant="default"
+    className="
+      mt-6
+      bg-primary hover:bg-primary/90
+      transition-colors
+      px-10 py-6.5
+      text-lg font-base
+      rounded-md
+      shadow-md
+      mx-auto
+    "
+  >
+    <Link to="/poetry">
+      <span
+        ref={ref}
+        className={`typewriter inline-block font-medium ${typed ? 'typed' : ''} text-white/85`}
+        style={{ fontFamily: 'inherit' }}
       >
-        <h1 className="text-4xl md:text-6xl font-instrument leading-tight text-center">
-          Lauren Sickles
-        </h1>
-
-        <p className="text-sm md:text-base uppercase tracking-[0.2em] text-foreground/60 font-medium">
-          Writer · Poet · Storyteller
-        </p>
-
-        <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto">
-My poetry, essays, and reflective writing are gathered here, in one place        </p>
-
-        <Button
-          asChild
-          variant="default"
-          className="mt-6 bg-primary hover:bg-primary/90 transition-colors px-10 py-6.5 text-lg font-base rounded-md shadow-md "
-        >
-          <Link to="/poetry">
-            <span
-              ref={ref}
-              className={`typewriter inline-block font-medium ${typed ? "typed" : ""} text-white/85`}
-              style={{ fontFamily: "inherit" }}
-            >
-              Explore My Work
-            </span>
-          </Link>
-        </Button>
-      </section>
+        Explore My Work
+      </span>
+    </Link>
+  </Button>
+</section>
 
       {/* Featured Sections */}
    <section className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">

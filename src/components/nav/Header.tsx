@@ -65,9 +65,21 @@ export default function Header() {
               <Link
                 key={item.href}
                 to={item.href}
-                className={`text-lg font-semibold text-foreground py-2 ${
-                  location.pathname === item.href ? "underline" : ""
-                }`}
+                className={`
+  text-lg
+  font-base
+  leading-tight
+  tracking-tight
+  py-2
+  transition-colors
+  text-foreground/80
+
+  ${
+    location.pathname === item.href
+      ? "text-foreground underline"
+      : "text-foreground/80 hover:text-foreground"
+  }
+`}
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
@@ -89,7 +101,17 @@ export default function Header() {
                   key={item.href}
                   asChild
                   variant="ghost"
-                  className="relative px-2 py-1 text-lg font-semibold text-foreground transition-colors group"
+                  className="
+                          relative px-2 py-1
+                          text-[1.05rem]
+                          font-semibold
+                          leading-tight
+                          tracking-tight
+                          text-foreground/80
+                          hover:text-foreground
+                          transition-colors
+                          group
+                        "
                 >
                   <Link
                     to={item.href}

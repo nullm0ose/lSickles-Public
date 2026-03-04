@@ -24,7 +24,7 @@ export default function Poetry() {
     );
 
   return (
-    <main className="px-6 py-16 space-y-20 w-full mx-auto max-w-6xl xl:max-w-7xl">
+    <main className="px-6 py-16 space-y-25 w-full mx-auto max-w-6xl xl:max-w-7xl">
 
       {/* Page Header */}
       <section
@@ -34,13 +34,27 @@ export default function Poetry() {
         md:text-left opacity-0 animate-fade-in-up"
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
-<h1 className="text-5xl sm:text-6xl md:text-7xl font-instrument page-header text-center">
+<h1 className="
+  text-5xl sm:text-6xl md:text-6xl
+  font-instrument
+  leading-tight
+  tracking-tight
+  text-foreground
+  text-center
+  text-balance
+">
   Poetry
 </h1>
 
-<p className="mt-6 max-w-2xl mx-auto text-center 
-               text-base sm:text-lg md:text-xl 
-               text-foreground/70 leading-relaxed">
+<p className="
+  mt-6 mx-auto
+  text-base sm:text-lg md:text-xl
+  leading-relaxed
+  tracking-normal
+  text-foreground/70
+  text-center
+  max-w-prose
+">
   These pieces move between past and present. Some poems are tender. 
   Some are unsparing.
 

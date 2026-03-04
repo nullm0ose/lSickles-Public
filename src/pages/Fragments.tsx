@@ -25,7 +25,7 @@ const sortedStories = [...fragmentsPosts].sort(
     );
 
   return (
-    <main className="px-6 py-16 space-y-20 w-full mx-auto max-w-6xl xl:max-w-7xl">
+    <main className="px-6 py-16 space-y-25 w-full mx-auto max-w-6xl xl:max-w-7xl">
 
       {/* Page Header */}
       <section
@@ -33,13 +33,27 @@ const sortedStories = [...fragmentsPosts].sort(
         mx-auto text-center md:text-left opacity-0 animate-fade-in-up"
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
-<h1 className="text-5xl sm:text-6xl md:text-7xl font-instrument page-header text-center">
+<h1 className="
+  text-5xl sm:text-6xl md:text-6xl
+  font-instrument
+  leading-tight
+  tracking-tight
+  text-foreground
+  text-center
+  text-balance
+">
   Fragments
 </h1>
 
-<p className="mt-6 max-w-2xl mx-auto text-center 
-              text-base sm:text-lg md:text-xl 
-              text-foreground/70 leading-relaxed">
+<p className="
+  mt-6 max-w-2xl mx-auto
+  text-base sm:text-lg md:text-xl
+  leading-relaxed
+  tracking-normal
+  text-foreground/70
+  text-center
+  max-w-prose
+">
   Fragments hold moments. They are field notes from a life in motion. 
   Some feel unfinished. Some are complete in their brevity.
 

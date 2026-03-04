@@ -22,21 +22,42 @@ export default function Contact() {
             alt="Lauren Sickles"
             className="w-32 h-32 rounded-full mx-auto mb-4 object-cover mt-2"
           />
-          <h1 className="text-5xl font-serif font-semibold mt-10">
-            Lets get in touch
-          </h1>
-          <p className="text-lg text-foreground leading-relaxed">
-            If you are interested in collaboration, publication, or thoughtful conversation,
-            I welcome your message.
-          </p>
-          <p className="text-foreground/70 text-base">
-            I aim to respond within a few business days.
-          </p>
+<h1 className="
+  text-4xl sm:text-4xl md:text-5xl
+  font-serif
+  leading-snug
+  tracking-tight
+  text-foreground
+  mt-13
+  text-center
+">
+  Let’s Get in Touch
+</h1>
+
+<p className="
+  mt-4 text-lg
+  leading-relaxed
+  text-foreground
+  text-center
+  max-w-prose mx-auto
+">
+  If you’re interested in collaboration, publication, or simply a thoughtful conversation, I’d love to hear from you.
+</p>
+
+<p className="
+  mt-2 text-base
+  leading-relaxed
+  text-foreground/70
+  text-center
+  max-w-prose mx-auto
+">
+  I usually respond within a few business days.
+</p>
         </div>
       </section>
 
       {/* Contact Form */}
-      <section className="max-w-3xl mx-auto relative rounded-xl p-8 md:p-12">
+      <section className="max-w-4xl mx-auto relative rounded-xl p-6 md:p-12">
         {/* Stable background */}
         <div className="absolute inset-0 rounded-xl bg-card/40" />
         {/* Animated content */}

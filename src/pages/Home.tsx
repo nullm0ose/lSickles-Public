@@ -188,11 +188,12 @@ This is ongoing work, shaped by where I have been and where I am willing to go.
     className="mb-10 opacity-0 translate-y-4 animate-fade-in-up text-center sm:text-left"
     style={{ animationDelay: '1.2s', animationFillMode: 'forwards', animationDuration: '0.6s' }}
   >
-    <h2 className="text-3xl font-serif  mt-5 relative inline-block">
+    <h2 className="text-3xl font-serif  mt-5 relative inline-block   leading-snug
+  tracking-tight">
       Latest Posts
       <span className="hand-underline" />
     </h2>
-    <p className="text-foreground text-base mx-auto sm:mx-0 max-w-3xl">
+    <p className="text-foreground text-base mx-auto sm:mx-0 max-w-3xl   leading-relaxed">
       A curated selection of recent poetry, essays, and reflections.
     </p>
   </div>
@@ -217,12 +218,23 @@ This is ongoing work, shaped by where I have been and where I am willing to go.
     ].map((post, idx) => (
       <div
         key={post.href}
-        className="relative border-b border-border bg-card/50 rounded-md p-4 flex flex-col sm:flex-row items-center justify-between opacity-0 translate-y-2 animate-fade-in-up"
+        className="relative border-b border-border bg-card/50 rounded-md p-4 flex flex-col sm:flex-row items-center justify-between opacity-0 translate-y-2 animate-fade-in-up py-6"
         style={{ animationDelay: `${1.3 + idx * 0.1}s`, animationFillMode: 'forwards', animationDuration: '0.5s' }}
       >
-        <div className="flex-1 pr-0 sm:pr-24 text-center sm:text-left">
-          <h3 className="text-lg font-sans font-medium  ">{post.title}</h3>
-          <p className="text-foreground text-base mt-1 max-w-4xl">{post.excerpt}</p>
+        <div className="flex-1 pr-0 sm:pr-24 text-center sm:text-left ">
+          <p className="
+  text-lg sm:text-lg
+   font-medium
+  leading-snug tracking-tight
+  text-foreground/80
+">
+  {post.title}
+</p>
+          <p className="  text-base 
+  leading-relaxed
+  text-foreground/70
+  mt-1
+  max-w-4xl">{post.excerpt}</p>
         </div>
         <div className="mt-4 sm:mt-0 sm:absolute sm:right-4 sm:top-1/2 sm:-translate-y-1/2">
           <Button asChild variant="ghost" className="text-foreground hover:text-primary transition-colors px-4 py-1 text-sm">

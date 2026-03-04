@@ -33,7 +33,7 @@ export default function TheArchive() {
     );
 
   return (
-    <main className="px-6 py-16 space-y-20 w-full mx-auto max-w-6xl xl:max-w-7xl">
+    <main className="px-6 py-16 space-y-25 w-full mx-auto max-w-6xl xl:max-w-7xl">
 
 
       {/* Page Header */}
@@ -41,13 +41,27 @@ export default function TheArchive() {
         className="space-y-4 text-center md:text-left opacity-0 animate-fade-in-up"
         style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
       >
-<h1 className="text-5xl sm:text-6xl md:text-7xl font-instrument page-header text-center">
+<h1 className="
+  text-5xl sm:text-6xl md:text-6xl
+  font-instrument
+  leading-tight
+  tracking-tight
+  text-foreground
+  text-center
+  text-balance
+">
   The Archive
 </h1>
 
-<p className="mt-6 max-w-2xl mx-auto text-center 
-              text-base sm:text-lg md:text-xl 
-              text-foreground/70 leading-relaxed">
+<p className="
+  mt-6 max-w-2xl mx-auto
+  text-base sm:text-lg md:text-xl
+  leading-relaxed
+  tracking-normal
+  text-foreground/70
+  text-center
+  max-w-prose
+">
   These essays return to early rooms and early rules.
 
   They expand on lived experience. They follow memory past nostalgia and into consequence.

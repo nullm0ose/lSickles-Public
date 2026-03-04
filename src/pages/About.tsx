@@ -4,10 +4,10 @@ import profile from "@/assets/profile.jpg";
 
 const ImageBackground = () => (
   <div
-    className="absolute inset-0 rounded-xl z-0"
+    className="absolute inset-0 rounded-xl z-0 shadow-lg"
     style={{
-      backgroundColor: "rgba(179,166,153,0.3)",
-      transform: "rotate(-10deg)",
+      backgroundColor: "rgba(179,166,153,0.15)",
+      transform: "rotate(-6deg)",
       backfaceVisibility: "hidden",
     }}
   />
@@ -15,13 +15,11 @@ const ImageBackground = () => (
 
 export default function About() {
   return (
-    <main className="mx-auto px-6 py-16 space-y-20">
+    <main className="mx-auto px-6 py-16 space-y-13 md:space-y-18">
 
       {/* Top Section: Intro + Image */}
-      <section className="max-w-5xl mx-auto relative rounded-xl p-10 md:p-14">
-        {/* Background */}
-        <div className="absolute inset-0 rounded-xl bg-card/40" />
-        {/* Content wrapper for fade-in */}
+      <section className="relative max-w-5xl mx-auto px-6 py-12 sm:py-16">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/10 -z-10 rounded-xl" />
         <div
           className="relative flex flex-col md:flex-row items-center gap-10 opacity-0 animate-fade-in-up"
           style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
@@ -38,16 +36,39 @@ export default function About() {
 
           {/* Intro Text */}
           <div className="flex-1 text-center md:text-left space-y-4">
-            <h1 className="text-4xl md:text-5xl font-serif font-semibold">
+            <h1 className="
+              text-4xl md:text-5xl
+              font-serif
+              leading-snug
+              tracking-tight
+              text-foreground
+              text-center md:text-left
+            ">
               Lauren Sickles
             </h1>
-            <p className="text-lg text-foreground leading-relaxed">
+
+            <h3 className="
+              mt-4 text-lg md:text-lg
+              leading-relaxed
+              tracking-normal
+              text-foreground
+              text-center md:text-left
+              max-w-prose
+              font-sans
+            ">
               I am a writer focused on poetry, essays, and reflective prose. My work
               explores memory, identity, imagination, and the moments that shape who we become.
               This site serves as a curated archive, a deliberate and enduring home for my
               work.
-            </p>
-            <p className="text-foreground/70 text-base">
+            </h3>
+
+            <p className="
+              text-base sm:text-base
+              leading-relaxed
+              text-foreground/70
+              text-center md:text-left
+              max-w-prose
+            ">
               This site is a carefully chosen home for my work, a place to keep it alive and accessible.
             </p>
           </div>
@@ -56,67 +77,95 @@ export default function About() {
 
       {/* Writing Philosophy */}
       <section
-        className="max-w-3xl mx-auto text-center space-y-6 opacity-0 animate-fade-in-up"
-        style={{ animationDelay: "0.15s", animationDuration: "0.35s", animationFillMode: "forwards" }}
+        className="relative max-w-4xl mx-auto px-6 py-12 sm:py-16 space-y-6 text-center"
       >
-        <h2 className="text-3xl font-serif font-semibold">Writing Philosophy</h2>
-        <p className="text-foreground text-base leading-relaxed">
-          I believe writing should be intentional, grounded, and human. In a world that moves quickly, I am
-          drawn to work that lingers, language that invites reflection rather than reaction.
-        </p>
-        <p className="text-foreground text-base leading-relaxed">
-          My approach favors clarity over noise, emotional honesty over spectacle, and cohesion over
-          constant output. Each piece is meant to stand on its own, yet contribute to a larger body of work.
-        </p>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent to-gray-50/10 -z-10 rounded-xl" />
+        <div className="relative opacity-0 animate-fade-in-up" style={{ animationDelay: "0.15s", animationDuration: "0.35s", animationFillMode: "forwards" }}>
+          <h2 className="
+            text-3xl md:text-3xl
+            font-serif
+            leading-snug
+            tracking-tight
+            text-foreground
+          ">
+            What I Seek in Writing
+            <span className="block w-85 h-1 bg-primary/30 rounded-full mt-2 mx-auto" />
+          </h2>
+
+          <p className="
+            mt-3 text-base sm:text-lg
+            leading-relaxed
+            text-foreground
+            max-w-prose mx-auto
+          ">
+            I believe writing should be intentional, grounded, and human. In a world that moves quickly, I am
+            drawn to work that lingers, language that invites reflection rather than reaction.
+          </p>
+
+          <p className="
+            mt-2 text-base sm:text-lg
+            leading-relaxed
+            text-foreground
+            max-w-prose mx-auto
+          ">
+            My approach favors clarity over noise, emotional honesty over spectacle, and cohesion over
+            constant output. Each piece is meant to stand on its own, yet contribute to a larger body of work.
+          </p>
+        </div>
       </section>
 
       {/* Areas of Focus */}
-      <section
-        className="max-w-5xl mx-auto relative rounded-xl p-8 md:p-12 text-center space-y-8"
-      >
-        {/* Background */}
-        <div className="absolute inset-0 rounded-xl bg-card/40" />
-        {/* Content wrapper */}
-        <div
-          className="relative opacity-0 animate-fade-in-up"
-          style={{ animationDelay: "0.3s", animationDuration: "0.35s", animationFillMode: "forwards" }}
-        >
-          <h2 className="text-3xl font-serif font-semibold relative inline-block">
-            Areas of Focus
-            <span
-              style={{
-                position: "absolute",
-                left: 0,
-                bottom: "-0.15rem",
-                width: "100%",
-                height: "0.2rem",
-                backgroundColor: "#b3a699",
-                borderRadius: "9999px / 50%",
-                opacity: 0.9,
-                transform: "scaleX(1) rotate(0.5deg)",
-              }}
-            />
+      <section className="relative max-w-5xl mx-auto px-6 py-12 sm:py-16 space-y-8 text-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/10 -z-10 rounded-xl" />
+        <div className="relative opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s", animationDuration: "0.35s", animationFillMode: "forwards" }}>
+          <h2 className="
+            text-2xl md:text-4xl
+            font-serif
+            leading-snug
+            tracking-tight
+            text-foreground
+            relative inline-block
+          ">
+My Creative Focus
+            <span className="hand-underline" />
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
-            <div className="space-y-3">
-              <h3 className="font-serif font-semibold text-xl">Poetry</h3>
-              <p className="text-foreground text-sm leading-relaxed">
+            <div className="space-y-2 p-4 rounded-xl hover:backdrop-blur-sm transition-all">
+              <h3 className="
+                text-xl
+                font-serif
+                leading-snug
+                tracking-tight
+                text-foreground
+              ">
+                Poetry
+              </h3>
+              <p className="
+                text-sm sm:text-base
+                leading-relaxed
+                text-foreground/70
+                max-w-prose mx-auto
+              ">
                 Work centered on emotion, symbolism, and reflection, often rooted in memory and
                 personal narrative.
               </p>
             </div>
 
-            <div className="space-y-3">
-              <h3 className="font-serif font-semibold text-xl">Essays</h3>
-              <p className="text-foreground text-sm leading-relaxed">
+            <div className="space-y-2 p-4 rounded-xl hover:backdrop-blur-sm transition-all">
+              <h3 className="text-xl font-serif leading-snug tracking-tight text-foreground">
+                Essays
+              </h3>
+              <p className="text-sm sm:text-base leading-relaxed text-foreground/70 max-w-prose mx-auto">
                 Thoughtful explorations of lived experience, identity, and the quiet complexities of everyday life.
               </p>
             </div>
 
-            <div className="space-y-3">
-              <h3 className="font-serif font-semibold text-xl">Fragments</h3>
-              <p className="text-foreground text-sm leading-relaxed">
+            <div className="space-y-2 p-4 rounded-xl hover:backdrop-blur-sm transition-all">
+              <h3 className="text-xl font-serif leading-snug tracking-tight text-foreground">
+                Fragments
+              </h3>
+              <p className="text-sm sm:text-base leading-relaxed text-foreground/70 max-w-prose mx-auto">
                 Narrative experiments that examine imagination, voice, and the spaces between memory and story.
               </p>
             </div>
@@ -125,21 +174,35 @@ export default function About() {
       </section>
 
       {/* Closing CTA */}
-      <section
-        className="text-center space-y-6 opacity-0 animate-fade-in-up"
-        style={{ animationDelay: "0.45s", animationDuration: "0.35s", animationFillMode: "forwards" }}
-      >
-        <h2 className="text-2xl font-serif font-semibold">Let’s Connect</h2>
-        <p className="text-foreground text-base max-w-2xl mx-auto">
-          If you are interested in collaboration, publication, or simply thoughtful conversation, I welcome you to reach out.
-        </p>
+      <section className="relative max-w-3xl mx-auto px-6 py-12 sm:py-10 space-y-6 text-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/10 -z-10 rounded-xl" />
+        <div className="relative opacity-0 animate-fade-in-up" style={{ animationDelay: "0.45s", animationDuration: "0.35s", animationFillMode: "forwards" }}>
+          <h2 className="
+            text-2xl sm:text-3xl
+            font-serif
+            leading-snug
+            tracking-tight
+            text-foreground
+          ">
+            Let’s Connect
+          </h2>
 
-        <Button
-          asChild
-          className="px-10 py-6 text-lg font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors duration-300 mt-10"
-        >
-          <Link to="/contact">Get in Touch</Link>
-        </Button>
+          <p className="
+            mt-2 text-base sm:text-lg
+            leading-relaxed
+            text-foreground
+            max-w-prose mx-auto
+          ">
+            If you are interested in collaboration, publication, or simply thoughtful conversation, I welcome you to reach out.
+          </p>
+
+          <Button
+            asChild
+            className="px-10 py-6 text-lg font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors duration-300 mt-10"
+          >
+            <Link to="/contact">Get in Touch</Link>
+          </Button>
+        </div>
       </section>
     </main>
   );

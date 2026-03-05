@@ -4,7 +4,7 @@ import { FaHandshake } from "react-icons/fa6";
 
 export default function Footer() {
   const socialLinks = [
-    { label: "Support my work", href: "https://www.paypal.com/donate/?business=7BCYKC3SRNTTW&no_recurring=0&item_name=These+pages+are+free+to+read.+If+you%E2%80%99d+like+to+support+this+archive+and+future+work%2C+I%E2%80%99m+grateful.+One-time+or+ongoing.&currency_code=USD", icon: <FaHandshake /> },
+    { label: "Support my work", href: "https://donate.stripe.com/00w28sc9ofOT1ca7P8gIo00", icon: <FaHandshake /> },
     { label: "Follow & Subscribe", href: "https://laurennsickles.substack.com", icon: <FaPenFancy /> },
   ];
 

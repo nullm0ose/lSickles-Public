@@ -21,7 +21,7 @@ export default function Home() {
   
 
   return (
-    <main className="space-y-20">
+    <main className="space-y-20 ">
 
 {/* Hero Section */}
 <section
@@ -36,7 +36,7 @@ export default function Home() {
     opacity-0 translate-y-4 animate-fade-in-up
 
     flex flex-col justify-center
-    min-h-[70vh] sm:min-h-auto
+    min-h-[70vh] sm:min-h-auto 
   "
   style={{ animationDelay: '0.1s', animationFillMode: 'forwards', animationDuration: '0.6s' }}
 >

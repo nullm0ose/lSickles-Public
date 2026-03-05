@@ -1,19 +1,24 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import profile from "@/assets/profile.jpg";
 
-const ImageBackground = () => (
-  <div
-    className="absolute inset-0 rounded-xl z-0 shadow-lg"
-    style={{
-      backgroundColor: "rgba(179,166,153,0.15)",
-      transform: "rotate(-6deg)",
-      backfaceVisibility: "hidden",
-    }}
-  />
-);
+
+
 
 export default function About() {
+
+useEffect(() => {
+  if (!document.querySelector('script[src="https://js.stripe.com/v3/buy-button.js"]')) {
+    const script = document.createElement("script");
+    script.src = "https://js.stripe.com/v3/buy-button.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+}, []);
+
+
+
   return (
     <main className="mx-auto px-6 py-16 space-y-13 md:space-y-18">
 
@@ -26,7 +31,14 @@ export default function About() {
         >
           {/* Image */}
           <div className="relative w-48 h-48 md:w-64 md:h-64">
-            <ImageBackground />
+              <div
+    className="absolute inset-0 rounded-xl z-0 shadow-lg"
+    style={{
+      backgroundColor: "rgba(179,166,153,0.15)",
+      transform: "rotate(-6deg)",
+      backfaceVisibility: "hidden",
+    }}
+  />
             <img
               src={profile}
               alt="Lauren Sickles"
@@ -81,16 +93,21 @@ export default function About() {
       >
         <div className="absolute inset-0 bg-linear-to-b from-transparent to-gray-50/10 -z-10 rounded-xl" />
         <div className="relative opacity-0 animate-fade-in-up" style={{ animationDelay: "0.15s", animationDuration: "0.35s", animationFillMode: "forwards" }}>
-          <h2 className="
-            text-3xl md:text-3xl
-            font-serif
-            leading-snug
-            tracking-tight
-            text-foreground
-          ">
-            What I Seek in Writing
-            <span className="block w-85 h-1 bg-primary/30 rounded-full mt-2 mx-auto" />
-          </h2>
+<h2
+  className="
+    text-2xl sm:text-3xl
+    font-serif
+    leading-snug
+    tracking-tight
+    text-foreground
+    text-center
+  "
+>
+  <span className="inline-block">
+    What I Seek in Writing
+    <span className="block w-full h-1 bg-primary/30 rounded-full mt-2 mx-auto" />
+  </span>
+</h2>
 
           <p className="
             mt-3 text-base sm:text-lg
@@ -202,6 +219,10 @@ My Creative Focus
           >
             <Link to="/contact">Get in Touch</Link>
           </Button>
+
+              <>
+
+    </>
         </div>
       </section>
     </main>

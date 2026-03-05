@@ -78,12 +78,32 @@ export default function Home() {
       >
         Explore My Work
       </span>
-    </Link>
+    </Link> 
   </Button>
 </section>
 
       {/* Featured Sections */}
-   <section className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+   <section className="mx-auto max-w-7xl  gap-6 md:gap-10 text-center">
+<h2 className="text-4xl md:text-4xl text-center font-regular tracking-tight block md:hidden">
+  <span className="relative inline-block mb-3 mt-5">
+    Writing that speaks
+    <span
+      className="absolute left-0 -bottom-0.5 w-full h-0.5 bg-accent rounded-full opacity-90"
+      style={{ transform: 'scaleX(1) rotate(0.5deg)' }}
+    />
+  </span>
+</h2>
+
+<p className="text-foreground text-base md:text-base leading-relaxed block md:hidden">
+  The pieces speak to one another. They build over time. They record a life in motion. They examine labor, memory, authority, growth, and the tension between care and resistance.
+
+  This is ongoing work, shaped by where I have been and where I am willing to go.
+</p>
+
+<p className="text-foreground/70 text-sm md:text-base italic mb-10 block md:hidden">
+  This site gathers my writing in one place
+</p>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">  
   {[
     {
       title: "Poetry",
@@ -127,11 +147,13 @@ export default function Home() {
       </span>
     </Link>
   ))}
+  </div>
 </section>
 
 {/* About Section */}
 <section
   className="
+    hidden md:block
     w-full mx-auto max-w-5xl lg:max-w-6xl
     text-center
     space-y-6

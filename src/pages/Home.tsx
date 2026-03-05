@@ -41,7 +41,7 @@ export default function Home() {
   style={{ animationDelay: '0.1s', animationFillMode: 'forwards', animationDuration: '0.6s' }}
 >
   {/* Name */}
-  <h1 className="text-[2.5rem] sm:text-4xl md:text-6xl font-instrument leading-tight">
+  <h1 className="text-[2.5rem] sm:text-4xl md:text-6xl font-serif leading-tight font-medium  text-foreground">
     Lauren Sickles
   </h1>
 

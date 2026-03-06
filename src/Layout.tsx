@@ -12,7 +12,7 @@ export default function Layout() {
         <Header />
       </header>
 
-      <main className="flex-1 w-full">
+      <main className="flex-1 w-full bg-background">
         <div className="flex-1 px-4 sm:px-6 lg:px-8 py-12 max-w-[100vw] mx-auto bg-background">
           <Outlet />
         </div>

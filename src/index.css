@@ -58,6 +58,8 @@
   --shadow-xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.10), 0 8px 10px -1px oklch(0.00 0 0 / 0.10);
   --shadow-2xl: 0 1px 3px 0px oklch(0.00 0 0 / 0.25);
 
+  
+
 
   
 }
@@ -155,6 +157,10 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+
+
+
+  
 }
 
 
@@ -250,7 +256,13 @@
   border-right: none; /* remove cursor after typing */
 }
 
+
+
+
+
+
 @keyframes typing {
   from { width: 0; }
   to { width: 18ch; } /* number of characters in text */
 }
+

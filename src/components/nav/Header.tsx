@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <>
       {/* Mobile Header */}
-      <div className="md:hidden w-full bg-background border-b border-border">
+      <div className="md:hidden w-full bg-background! border-b border-border relative z-50">
         <div className="flex justify-between items-center px-6 py-4">
           {/* Logo or Site Name */}
           <Link to="/" className="text-xl font-semibold font-serif text-foreground">
@@ -59,12 +59,11 @@ export default function Header() {
         </div>
 
         {/* Mobile menu */}
-      {/* Mobile menu */}
 <div
   className={`
     overflow-hidden
-    transition-all duration-300 ease-out
-    ${mobileOpen ? "max-h-96 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}
+    transition-[max-height] duration-300 ease-out bg-background
+    ${mobileOpen ? "max-h-96" : "max-h-0"}
   `}
 >
   <nav className="flex flex-col gap-4 px-6 pb-4 bg-background">

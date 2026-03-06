@@ -1,43 +1,67 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import profile from "@/assets/profile.jpg";
 
 export default function About() {
+  const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
-    if (!document.querySelector('script[src="https://js.stripe.com/v3/buy-button.js"]')) {
-      const script = document.createElement("script");
-      script.src = "https://js.stripe.com/v3/buy-button.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
+    const img = new Image();
+    img.src = profile;
+
+    img.onload = () => {
+      setLoaded(true);
+    };
   }, []);
 
   return (
-    <main className="mx-auto px-6 py-16 space-y-13 md:space-y-18">
-
+<main className="mx-auto space-y-13 md:space-y-18 w-full">
       {/* Top Section: Intro + Image */}
-      <section className="relative max-w-5xl mx-auto px-6 py-12 sm:py-16 bg-transparent rounded-xl">
-        <div
-          className="relative flex flex-col md:flex-row items-center gap-10 opacity-0 animate-fade-in-up"
-          style={{ animationDuration: "0.35s", animationFillMode: "forwards" }}
-        >
+
+  
+
+
+<section
+  className="
+    w-full sm:max-w-7xl mx-auto max-w-6xl xl:max-w-7xl
+    text-center
+    space-y-7
+    rounded-xl
+    p-6 sm:p-10 md:p-14 lg:p-16
+    
+    opacity-0 translate-y-4 animate-fade-in-up
+flex flex-col md:flex-row items-center gap-10
+    justify-center
+    sm:min-h-auto 
+  "
+  style={{ animationDelay: '0.1s', animationFillMode: 'forwards', animationDuration: '0.6s' }}
+>
           {/* Image */}
-          <div className="relative w-48 h-48 md:w-64 md:h-64">
-            <div
-              className="absolute inset-0 rounded-xl z-0 shadow-lg"
-              style={{
-                backgroundColor: "rgba(179,166,153,0.15)",
-                transform: "rotate(-6deg)",
-                backfaceVisibility: "hidden",
-              }}
-            />
-            <img
-              src={profile}
-              alt="Lauren Sickles"
-              className="relative w-full h-full object-cover rounded-xl z-10"
-            />
-          </div>
+        
+      {!loaded ? (
+        <div
+          className="relative w-48 h-48 md:w-64 md:h-64 rounded-xl z-10 block bg-border/40 animate-pulse"
+        />
+      
+) : (
+    <div className="relative w-48 h-48 md:w-64 md:h-64">
+                  <div
+        className="absolute inset-0 rounded-xl z-0 shadow-lg bg-card"
+        style={{
+          transform: "rotate(-6deg)",
+          backfaceVisibility: "hidden",
+                          backgroundColor: "rgba(179,166,153,0.15)",
+
+          zIndex: 0,
+        }}
+      />
+        <img
+          src={profile}
+          className="relative w-full h-full object-cover rounded-xl z-10 block"
+        />
+    </div>
+      )}
 
           {/* Intro Text */}
           <div className="flex-1 text-center md:text-left space-y-4">
@@ -52,17 +76,16 @@ export default function About() {
               work.
             </h3>
 
-            <p className="text-base sm:text-base leading-relaxed text-foreground/70 max-w-prose">
+            <p className="text-base sm:text-base leading-relaxed text-muted-foreground max-w-prose">
               This site is a carefully chosen home for my work, a place to keep it alive and accessible.
             </p>
           </div>
-        </div>
       </section>
 
       {/* Writing Philosophy */}
-      <section className="relative max-w-4xl mx-auto px-6 py-12 sm:py-16 space-y-6 text-center bg-transparent rounded-xl">
+      <section className="relative max-w-4xl mx-auto px-6 py-12 sm:py-16 space-y-6 text-center rounded-xl">
         <div
-          className="relative opacity-0 animate-fade-in-up"
+          className="relative will-change-transform opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.15s", animationDuration: "0.35s", animationFillMode: "forwards" }}
         >
           <h2 className="text-2xl sm:text-3xl font-serif leading-snug tracking-tight text-foreground">
@@ -85,9 +108,9 @@ export default function About() {
       </section>
 
       {/* Areas of Focus */}
-      <section className="relative max-w-6xl mx-auto px-6 py-12 sm:py-16 space-y-8 text-center bg-card rounded-xl">
+      <section className="relative max-w-6xl mx-auto px-6 py-12 sm:py-16 space-y-8 text-center  rounded-xl">
         <div
-          className="relative opacity-0 animate-fade-in-up"
+          className="relative will-change-transform opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.3s", animationDuration: "0.35s", animationFillMode: "forwards" }}
         >
           <h2 className="text-2xl md:text-4xl font-serif leading-snug tracking-tight text-foreground relative inline-block">
@@ -107,7 +130,7 @@ export default function About() {
                 }}
               >
                 <h3 className="text-xl font-serif leading-snug tracking-tight text-foreground">{type}</h3>
-                <p className="text-sm sm:text-base leading-relaxed text-foreground/70 max-w-prose mx-auto">
+                <p className="text-sm sm:text-base leading-relaxed text-muted-foreground max-w-prose mx-auto">
                   {type === "Poetry" &&
                     "Work centered on emotion, symbolism, and reflection, often rooted in memory and personal narrative."}
                   {type === "Essays" &&
@@ -122,9 +145,9 @@ export default function About() {
       </section>
 
       {/* Closing CTA */}
-      <section className="relative max-w-3xl mx-auto px-6 py-12 sm:py-10 space-y-6 text-center bg-transparent rounded-xl">
+      <section className="relative max-w-3xl mx-auto px-6 py-12 sm:py-10 space-y-6 text-center rounded-xl">
         <div
-          className="relative opacity-0 animate-fade-in-up"
+          className="relative will-change-transform opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.45s", animationDuration: "0.35s", animationFillMode: "forwards" }}
         >
           <h2 className="text-2xl sm:text-3xl font-serif leading-snug tracking-tight text-foreground">

@@ -22,8 +22,8 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-foreground hover:text-primary transition-colors text-sm font-medium"
             >
-              <span className="text-lg">{item.icon}</span>
-              <span className="">{item.label}</span>
+              <span className="text-2xl">{item.icon}</span>
+              <span className="font-spectral ">{item.label}</span>
             </a>
           ))}
         </div>

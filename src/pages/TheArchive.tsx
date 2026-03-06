@@ -9,7 +9,7 @@ export default function TheArchive() {
   if (!sortedContent.length) {
     return (
       <main className="w-full px-6 py-16 mx-auto text-center md:text-left">
-        <h1 className="text-5xl font-instrument">The Archive</h1>
+        <h1 className="text-5xl font-serif">The Archive</h1>
         <p className="mt-6 text-foreground/70 max-w-3xl mx-auto md:mx-0">
           No entries yet.
         </p>
@@ -43,7 +43,7 @@ export default function TheArchive() {
       >
 <h1 className="
   text-5xl sm:text-6xl md:text-6xl
-  font-instrument
+  font-serif
   leading-tight
   tracking-tight
   text-foreground
@@ -54,13 +54,14 @@ export default function TheArchive() {
 </h1>
 
 <p className="
-  mt-6 max-w-2xl mx-auto
+   mt-6 mx-auto
   text-base sm:text-lg md:text-xl
   leading-relaxed
   tracking-normal
   text-foreground/70
   text-center
   max-w-prose
+  font-pro
 ">
   These essays return to early rooms and early rules.
 
@@ -100,8 +101,8 @@ export default function TheArchive() {
           <p className="text-sm text-foreground/60 uppercase tracking-[0.15em] font-medium">
             Featured Entry
           </p>
-          <h2 className="text-4xl font-serif leading-tight">{featuredContent.title}</h2>
-          <p className="text-foreground leading-relaxed">{featuredContent.excerpt}</p>
+          <h2 className="text-4xl font-pro  leading-tight">{featuredContent.title}</h2>
+          <p className="text-muted-foreground/90 leading-relaxed">{featuredContent.excerpt}</p>
           <Link
             to={`/archive/${featuredContent.slug}`}
             className="inline-block text-primary font-medium hover:underline"
@@ -117,10 +118,10 @@ export default function TheArchive() {
           className="space-y-2 text-center md:text-left opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.3s", animationDuration: "0.35s", animationFillMode: "forwards" }}
         >
-          <h2 className="text-3xl font-serif mt-5 relative inline-block">
+          <h3 className="text-2xl font-pro font-medium mt-5 relative inline-block">
             More to Explore
             <span className="hand-underline" />
-          </h2>
+          </h3>
           <p className="text-foreground/70 text-base max-w-3xl mx-auto md:mx-0">
             A curated selection of reflections exploring memory, stillness,
             and imagination.
@@ -182,10 +183,18 @@ export default function TheArchive() {
 <p className="text-sm text-foreground/60 mb-2">
   {new Date(post.date).toLocaleDateString("en-US", { month: "long", year: "numeric" })}
 </p>
-              <h2 className="text-xl font-sans font-medium mb-4 text-foreground/85">
-                {post.title}
-              </h2>
-              <p className="text-foreground text-base leading-relaxed max-w-3xl mx-auto md:mx-0">
+ <p className="
+  text-2xl sm:text-xl
+   font-pro font-medium
+  leading-snug tracking-tight
+
+">                {post.title}
+              </p>
+              <p className="text-base 
+  leading-snug
+  text-muted-foreground/90
+  mt-1
+  max-w-2xl">
                 {post.excerpt}
               </p>
               <Link

@@ -36,7 +36,7 @@ export default function Poetry() {
       >
 <h1 className="
   text-5xl sm:text-6xl md:text-6xl
-  font-instrument
+  font-serif
   leading-tight
   tracking-tight
   text-foreground
@@ -54,6 +54,7 @@ export default function Poetry() {
   text-foreground/70
   text-center
   max-w-prose
+  font-pro
 ">
   These pieces move between past and present. Some poems are tender. 
   Some are unsparing.
@@ -96,8 +97,8 @@ export default function Poetry() {
           <p className="text-sm text-foreground/60 uppercase tracking-[0.15em] font-medium">
             Featured Poem
           </p>
-          <h2 className="text-4xl font-serif leading-tight">{featuredPoem.title}</h2>
-          <p className="text-foreground leading-relaxed">{featuredPoem.excerpt}</p>
+          <h2 className="text-4xl font-pro  leading-tight">{featuredPoem.title}</h2>
+          <p className="text-muted-foreground/90 leading-relaxed">{featuredPoem.excerpt}</p>
           <Link
             to={`/poetry/${featuredPoem.slug}`}
             className="inline-block text-primary font-medium hover:underline"
@@ -118,10 +119,10 @@ export default function Poetry() {
             animationFillMode: "forwards",
           }}
         >
-          <h2 className="text-3xl font-serif mt-5 relative inline-block">
+          <h3 className="text-2xl font-pro font-medium mt-5 relative inline-block">
             Recent Poems
             <span className="hand-underline" />
-          </h2>
+          </h3>
           <p className="text-foreground/70 text-base max-w-3xl mx-auto md:mx-0">
             A curated selection of my latest reflections in poetry, exploring memory, stillness, and imagination.
           </p>
@@ -175,22 +176,29 @@ export default function Poetry() {
 
             {/* Text */}
             <div className="flex-1 mt-4 md:mt-0 text-center md:text-left">
-              <h3 className="text-xl font-sans font-medium text-foreground/85">{poem.title}</h3>
-<p className="text-sm text-foreground/60 mt-1">
+          <p className="
+  text-2xl sm:text-xl
+   font-pro font-medium
+  leading-snug tracking-tight
+
+">
+  {poem.title}</p>
+<p className="text-sm text-muted-foreground/50 mt-1 font-semibold">
   {new Date(poem.date).toLocaleDateString("en-US", { month: "long", year: "numeric" })}
 </p>
-              <p className="text-foreground text-base mt-3 leading-relaxed max-w-2xl mx-auto md:mx-0">
+              <p className="  text-base 
+  leading-snug
+  text-muted-foreground/90
+  mt-1
+  max-w-2xl">
                 {poem.excerpt}
               </p>
             </div>
 
             {/* Read Button */}
             <div className="mt-4 md:mt-0 md:absolute right-6 top-1/2 -translate-y-1/2">
-              <Button
-                asChild
-                variant="ghost"
-                className="text-foreground hover:text-primary transition-colors px-4 py-1 text-sm"
-              >
+          <Button asChild variant="ghost" className="text-primary hover:text-primary/80 transition-colors px-4 py-1 text-sm font-sans">
+
                 <Link to={`/poetry/${poem.slug}`}>Read</Link>
               </Button>
             </div>

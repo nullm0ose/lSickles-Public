@@ -24,12 +24,13 @@ export default function Contact() {
           />
 <h1 className="
   text-4xl sm:text-4xl md:text-5xl
-  font-serif
+  font-pro
   leading-snug
   tracking-tight
-  text-foreground
+  text-foreground/95
   mt-13
   text-center
+  font-medium
 ">
   Let’s Get in Touch
 </h1>
@@ -37,7 +38,7 @@ export default function Contact() {
 <p className="
   mt-4 text-lg
   leading-relaxed
-  text-foreground
+  text-muted-foreground
   text-center
   max-w-prose mx-auto
 ">

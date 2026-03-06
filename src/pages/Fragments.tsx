@@ -35,7 +35,7 @@ const sortedStories = [...fragmentsPosts].sort(
       >
 <h1 className="
   text-5xl sm:text-6xl md:text-6xl
-  font-instrument
+  font-serif
   leading-tight
   tracking-tight
   text-foreground
@@ -46,13 +46,14 @@ const sortedStories = [...fragmentsPosts].sort(
 </h1>
 
 <p className="
-  mt-6 max-w-2xl mx-auto
+  mt-6 mx-auto
   text-base sm:text-lg md:text-xl
   leading-relaxed
   tracking-normal
   text-foreground/70
   text-center
   max-w-prose
+  font-pro
 ">
   Fragments hold moments. They are field notes from a life in motion. 
   Some feel unfinished. Some are complete in their brevity.
@@ -90,8 +91,8 @@ const sortedStories = [...fragmentsPosts].sort(
             <p className="text-sm text-foreground/60 uppercase tracking-[0.15em] font-medium">
               Featured Story
             </p>
-            <h2 className="text-4xl font-serif leading-tight">{featuredStory.title}</h2>
-            <p className="text-foreground leading-relaxed">{featuredStory.excerpt}</p>
+            <h2 className="text-4xl font-pro leading-tight">{featuredStory.title}</h2>
+            <p className="text-muted-foreground/90 ">{featuredStory.excerpt}</p>
             <Link
               to={`/fragments/${featuredStory.slug}`}
               className="inline-block text-primary font-medium hover:underline"
@@ -108,10 +109,10 @@ const sortedStories = [...fragmentsPosts].sort(
           className="space-y-2 text-center md:text-left opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.45s", animationDuration: "0.35s", animationFillMode: "forwards" }}
         >
-          <h2 className="text-3xl font-serif mt-5 relative inline-block">
+          <h3 className="text-2xl font-pro font-medium mt-5 relative inline-block">
             Recent Stories
             <span className="hand-underline" />
-          </h2>
+          </h3>
           <p className="text-foreground/70 text-base max-w-3xl mx-auto md:mx-0">
             A selection of recent fiction pieces that explore imagination, memory,
             and the quiet moments between words.
@@ -172,10 +173,19 @@ const sortedStories = [...fragmentsPosts].sort(
     year: "numeric",
   })}
 </p>
-              <h3 className="text-xl font-sans font-medium text-foreground/85 group-hover:text-primary transition-colors">
+          <p className="
+  text-2xl sm:text-xl
+   font-pro font-medium
+  leading-snug tracking-tight
+
+">
                 {story.title}
-              </h3>
-              <p className="text-foreground text-base mt-2 flex-1 max-w-2xl mx-auto md:mx-0">{story.excerpt}</p>
+              </p>
+              <p className="text-base 
+  leading-snug
+  text-muted-foreground/90
+  mt-1
+  max-w-2xl">{story.excerpt}</p>
               <span className="mt-4 text-primary font-medium hover:underline inline-block">
                 Read Story →
               </span>

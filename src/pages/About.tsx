@@ -24,7 +24,7 @@ export default function About() {
 
 <section
   className="
-    w-full sm:max-w-7xl mx-auto max-w-6xl xl:max-w-7xl
+    w-full sm:max-w-4xl mx-auto max-w-4xl xl:max-w-6xl
     text-center
     space-y-7
     rounded-xl
@@ -69,14 +69,14 @@ flex flex-col md:flex-row items-center gap-10
               Lauren Sickles
             </h1>
 
-            <h3 className="mt-4 text-lg md:text-lg leading-relaxed tracking-normal text-foreground max-w-prose font-sans">
+            <h3 className="mt-4 text-base sm:text-base font-base leading-relaxed tracking-normal text-muted-foreground/90 max-w-prose font-pro">
               I am a writer focused on poetry, essays, and reflective prose. My work
               explores memory, identity, imagination, and the moments that shape who we become.
               This site serves as a curated archive, a deliberate and enduring home for my
               work.
             </h3>
 
-            <p className="text-base sm:text-base leading-relaxed text-muted-foreground max-w-prose">
+            <p className="text-base sm:text-base leading-relaxed text-muted-foreground/90 max-w-prose font-base">
               This site is a carefully chosen home for my work, a place to keep it alive and accessible.
             </p>
           </div>
@@ -88,19 +88,19 @@ flex flex-col md:flex-row items-center gap-10
           className="relative will-change-transform opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.15s", animationDuration: "0.35s", animationFillMode: "forwards" }}
         >
-          <h2 className="text-2xl sm:text-3xl font-serif leading-snug tracking-tight text-foreground">
+          <h2 className="text-3xl sm:text-4xl font-pro leading-snug tracking-tight text-foreground">
             <span className="inline-block">
               What I Seek in Writing
               <span className="block w-full h-1 bg-primary/30 rounded-full mt-2 mx-auto" />
             </span>
           </h2>
 
-          <p className="mt-3 text-base sm:text-lg leading-relaxed text-foreground max-w-prose mx-auto">
+          <p className="mt-10 text-base md:text-lg font-base leading-relaxed tracking-normal text-muted-foreground/90 max-w-prose font-pro  text-center mx-auto">
             I believe writing should be intentional, grounded, and human. In a world that moves quickly, I am
             drawn to work that lingers, language that invites reflection rather than reaction.
           </p>
 
-          <p className="mt-2 text-base sm:text-lg leading-relaxed text-foreground max-w-prose mx-auto">
+          <p className="mt-3 text-base md:text-lg font-base leading-relaxed tracking-normal text-muted-foreground/90 max-w-prose font-pro mx-auto ">
             My approach favors clarity over noise, emotional honesty over spectacle, and cohesion over
             constant output. Each piece is meant to stand on its own, yet contribute to a larger body of work.
           </p>
@@ -113,24 +113,24 @@ flex flex-col md:flex-row items-center gap-10
           className="relative will-change-transform opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.3s", animationDuration: "0.35s", animationFillMode: "forwards" }}
         >
-          <h2 className="text-2xl md:text-4xl font-serif leading-snug tracking-tight text-foreground relative inline-block">
+          <h2 className="text-3xl md:text-4xl font-pro leading-snug tracking-tight text-foreground relative inline-block">
             My Creative Focus
             <span className="hand-underline" />
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 ">
             {["Poetry", "Essays", "Fragments"].map((type, idx) => (
               <div
                 key={type}
-                className="space-y-2 p-4 rounded-xl hover:backdrop-blur-sm transition-all opacity-0 animate-fade-in-up"
+                className="space-y-3 p-4 rounded-xl  transition-all opacity-0 animate-fade-in-up  "
                 style={{
                   animationDelay: `${0.35 + idx * 0.1}s`,
                   animationDuration: "0.35s",
                   animationFillMode: "forwards",
                 }}
               >
-                <h3 className="text-xl font-serif leading-snug tracking-tight text-foreground">{type}</h3>
-                <p className="text-sm sm:text-base leading-relaxed text-muted-foreground max-w-prose mx-auto">
+                <h3 className="text-2xl md:text-2xl font-pro leading-snug tracking-tight text-foreground">{type}</h3>
+          <p className="mt-3 text-base md:text-lg font-base leading-relaxed tracking-normal text-muted-foreground/90 max-w-prose font-pro ">
                   {type === "Poetry" &&
                     "Work centered on emotion, symbolism, and reflection, often rooted in memory and personal narrative."}
                   {type === "Essays" &&
@@ -150,7 +150,7 @@ flex flex-col md:flex-row items-center gap-10
           className="relative will-change-transform opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.45s", animationDuration: "0.35s", animationFillMode: "forwards" }}
         >
-          <h2 className="text-2xl sm:text-3xl font-serif leading-snug tracking-tight text-foreground">
+          <h2 className="text-3xl sm:text-4xl font-pro leading-snug tracking-tight text-foreground font-medium relative inline-block">
             Let’s Connect
           </h2>
 

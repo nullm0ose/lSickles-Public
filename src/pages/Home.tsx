@@ -51,7 +51,7 @@ export default function Home() {
   </p>
 
   {/* Description */}
-  <p className="text-lg md:text-xl text-foreground max-w-[90%] sm:max-w-3xl mx-auto">
+  <p className="text-lg md:text-xl text-muted-foreground max-w-[90%] sm:max-w-3xl mx-auto  leading-relaxed">
     My poetry, essays, and reflective writing are gathered here, in one place
   </p>
 
@@ -94,15 +94,12 @@ export default function Home() {
   </span>
 </h2>
 
-<p className="text-foreground text-base md:text-base leading-relaxed block md:hidden">
+<p className="text-foreground text-base md:text-base leading-loose block md:hidden px-2 mb-10">
   The pieces speak to one another. They build over time. They record a life in motion. They examine labor, memory, authority, growth, and the tension between care and resistance.
 
   This is ongoing work, shaped by where I have been and where I am willing to go.
 </p>
 
-<p className="text-foreground/70 text-sm md:text-base italic mb-10 block md:hidden">
-  This site gathers my writing in one place
-</p>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">  
   {[
     {
@@ -124,28 +121,30 @@ export default function Home() {
       href: "fragments", // <-- use the actual route
     },
   ].map((item, idx) => (
-    <Link
-      key={item.title}
-      to={item.href}
-      className={`
-        group flex flex-col p-6 border border-border rounded-md hover:shadow-md transition-shadow bg-card/40
-        opacity-0 translate-y-4 animate-fade-in-up
-        text-center md:text-center 
-      `}
-      style={{
-        animationDelay: `${0.2 + idx * 0.15}s`,
-        animationFillMode: "forwards",
-        animationDuration: "0.6s",
-      }}
-    >
-      <h2 className="text-2xl font-instrument leading-tight mb-2 group-hover:text-primary transition-colors ">
-        {item.title}
-      </h2>
-      <p className="text-foreground text-base">{item.description}</p>
-      <span className="mt-4 text-primary font-medium group-hover:underline transition-all">
-        View {item.title.toLowerCase()}
-      </span>
-    </Link>
+   <Link
+  key={item.title}
+  to={item.href}
+  className={`
+    group flex flex-col justify-between p-6 border border-border rounded-md hover:shadow-md transition-shadow bg-card/40
+    opacity-0 translate-y-4 animate-fade-in-up
+    text-center md:text-center 
+  `}
+  style={{
+    animationDelay: `${0.2 + idx * 0.15}s`,
+    animationFillMode: "forwards",
+    animationDuration: "0.6s",
+  }}
+>
+  <div>
+    <h2 className="text-2xl font-serif leading-tight mb-2 group-hover:text-primary transition-colors  ">
+      {item.title}
+    </h2>
+    <p className="text-muted-foreground text-base font-pro leading-relaxed tracking-loose">{item.description}</p>
+  </div>
+  <span className="mt-4 text-primary font-medium group-hover:underline transition-all">
+    View {item.title.toLowerCase()}
+  </span>
+</Link>
   ))}
   </div>
 </section>
@@ -164,7 +163,7 @@ export default function Home() {
   "
   style={{ animationDelay: '0.7s', animationFillMode: 'forwards', animationDuration: '0.6s' }}
 >
-  <h2 className="text-3xl md:text-4xl font-instrument  leading-tight">
+  <h2 className="text-3xl md:text-4xl font-serif  leading-tight font-medium  text-foreground relative inline-block">
 A Body of Work
   </h2>
   <p className="text-foreground text-base md:text-base leading-relaxed">
@@ -176,33 +175,14 @@ This is ongoing work, shaped by where I have been and where I am willing to go.
     This site gathers my writing in one place
   </p>
 
-  <div className="mt-6 flex flex-col md:flex-row justify-center gap-6">
-    {["Poetry", "Archived Work", "Fragments"].map((type, idx) => (
-      <div
-        key={type}
-        className="opacity-0 translate-y-2 animate-fade-in-up"
-        style={{
-          animationDelay: `${0.8 + idx * 0.1}s`,
-          animationFillMode: 'forwards',
-          animationDuration: '0.5s'
-        }}
-      >
-        <h3 className="font-instrument  text-lg md:text-xl">{type}</h3>
-        <p className="text-foreground text-sm md:text-base max-w-xs mx-auto">
-          {type === "Poetry" && "Words tracing emotion & observation. Reduced to image and impact."}
-          {type === "Archived Work" && "Long form personal reflections rooted in lived experience."}
-          {type === "Fragments" && "Short works that hold a moment without forcing resolution."}
-        </p>
-      </div>
-    ))}
-  </div>
+
 </section>
 
 {/* Latest Posts Section */}
 <section
   className="
     w-full mx-auto max-w-xl xl:max-w-7xl
-    space-y-8
+    space-y-10
     p-1
   "
 >
@@ -210,12 +190,12 @@ This is ongoing work, shaped by where I have been and where I am willing to go.
     className="mb-10 opacity-0 translate-y-4 animate-fade-in-up text-center sm:text-left"
     style={{ animationDelay: '1.2s', animationFillMode: 'forwards', animationDuration: '0.6s' }}
   >
-    <h2 className="text-3xl font-serif  mt-5 relative inline-block   leading-snug
-  tracking-tight">
+    <h3 className="text-2xl font-pro  mt-5 relative inline-block   leading-snug font-medium
+  tracking-normal">
       Latest Posts
       <span className="hand-underline" />
-    </h2>
-    <p className="text-foreground text-base mx-auto sm:mx-0 max-w-3xl   leading-relaxed">
+    </h3>
+          <p className="text-foreground/70 text-base max-w-3xl mx-auto md:mx-0">
       A curated selection of recent poetry, essays, and reflections.
     </p>
   </div>
@@ -240,26 +220,28 @@ This is ongoing work, shaped by where I have been and where I am willing to go.
     ].map((post, idx) => (
       <div
         key={post.href}
-        className="relative border-b border-border bg-card/50 rounded-md p-4 flex flex-col sm:flex-row items-center justify-between opacity-0 translate-y-2 animate-fade-in-up py-6"
+        className="relative border-b border-border bg-card/50 rounded-lg p-4 flex flex-col sm:flex-row items-center justify-between opacity-0 translate-y-2 animate-fade-in-up py-10"
         style={{ animationDelay: `${1.3 + idx * 0.1}s`, animationFillMode: 'forwards', animationDuration: '0.5s' }}
       >
         <div className="flex-1 pr-0 sm:pr-24 text-center sm:text-left ">
           <p className="
-  text-lg sm:text-lg
-   font-medium
-  leading-snug tracking-tight
-  text-foreground/80
+  text-xl sm:text-lg
+   font-pro font-medium
+  leading-snug tracking-relaxed
+  text-foreground/85
+
 ">
   {post.title}
 </p>
           <p className="  text-base 
-  leading-relaxed
-  text-foreground/70
+  leading-snug
+  text-muted-foreground/80
   mt-1
-  max-w-4xl">{post.excerpt}</p>
+  max-w-4xl">
+    {post.excerpt}</p>
         </div>
         <div className="mt-4 sm:mt-0 sm:absolute sm:right-4 sm:top-1/2 sm:-translate-y-1/2">
-          <Button asChild variant="ghost" className="text-foreground hover:text-primary transition-colors px-4 py-1 text-sm">
+          <Button asChild variant="ghost" className="text-primary hover:text-primary/80 transition-colors px-4 py-1 text-base sm:text-sm ">
             <Link to={post.href}>Read More</Link>
           </Button>
         </div>
